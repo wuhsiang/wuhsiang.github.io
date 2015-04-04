@@ -3,17 +3,35 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hsiang&#39;s Blog</title>
+  <title>样本容量与模型验证 | Hsiang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="模型验证的方法模型验证有两种方法：
+
+如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它
+用概率论来测试发现的模式是否是巧合
+
+前者在统计学习中十分常见，即先用训练集来发现模式，并用测试集来验证；后者则是统计学中假设检验的思路，通过诸如p值等指标来判断发现的模式是否是随机的。
+在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过抽样设计来从总体中选择样本进行研究。常见的方">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hsiang's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:title" content="样本容量与模型验证">
+<meta property="og:url" content="http://yoursite.com/zh-cn/uncategorized/Sample-size/index.html">
 <meta property="og:site_name" content="Hsiang's Blog">
-<meta property="og:description">
+<meta property="og:description" content="模型验证的方法模型验证有两种方法：
+
+如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它
+用概率论来测试发现的模式是否是巧合
+
+前者在统计学习中十分常见，即先用训练集来发现模式，并用测试集来验证；后者则是统计学中假设检验的思路，通过诸如p值等指标来判断发现的模式是否是随机的。
+在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过抽样设计来从总体中选择样本进行研究。常见的方">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hsiang's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="样本容量与模型验证">
+<meta name="twitter:description" content="模型验证的方法模型验证有两种方法：
+
+如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它
+用概率论来测试发现的模式是否是巧合
+
+前者在统计学习中十分常见，即先用训练集来发现模式，并用测试集来验证；后者则是统计学中假设检验的思路，通过诸如p值等指标来判断发现的模式是否是随机的。
+在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过抽样设计来从总体中选择样本进行研究。常见的方">
   
     <link rel="alternative" href="/atom.xml" title="Hsiang&#39;s Blog" type="application/atom+xml">
   
@@ -59,9 +77,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Sample-size" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Sample-size" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/zh-cn/uncategorized/Sample-size/" class="article-date">
   <time datetime="2015-04-04T17:26:07.000Z" itemprop="datePublished">2015-04-05</time>
@@ -74,8 +90,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zh-cn/uncategorized/Sample-size/">样本容量与模型验证</a>
+    <h1 class="article-title" itemprop="name">
+      样本容量与模型验证
     </h1>
   
 
@@ -103,86 +119,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Welcome" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/zh-tw/uncategorized/Welcome/" class="article-date">
-  <time datetime="2015-04-04T17:20:58.000Z" itemprop="datePublished">2015-04-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zh-tw/uncategorized/Welcome/">歡迎來到我的部落格</a>
-    </h1>
+    <a href="/zh-tw/uncategorized/Welcome/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">歡迎來到我的部落格</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我通過Hexo和GitHub建立了此部落格。在部落格中，會分享個人工作和生活中的體驗。歡迎大家常來逛逛哦！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/zh-tw/uncategorized/Welcome/" data-id="ci83amb7l0001dkhwpsrm8aw1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-    <article id="post-Welcome" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/en/uncategorized/Welcome/" class="article-date">
-  <time datetime="2015-04-04T17:19:27.000Z" itemprop="datePublished">2015-04-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/uncategorized/Welcome/">Welcome</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>I have successfully built my blog upon <a href="http://hexo.io/" target="_blank" rel="external"><strong>Hexo</strong></a> and <a href="http://github.com" target="_blank" rel="external"><strong>GitHub</strong></a>.</p>
-<p>It is really a great idea to write blog in <strong>Markdown</strong> and host it on <strong>GitHub</strong>. Writing in <em>MarkdownPad 2</em>, an amazing markdown editor for Windows users, is always enjoyable.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/uncategorized/Welcome/" data-id="ci83amb790000dkhwepg3ynjg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
 </section>
         
           <aside id="sidebar">
