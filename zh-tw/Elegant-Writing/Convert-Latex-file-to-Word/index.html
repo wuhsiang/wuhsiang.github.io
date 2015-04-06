@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vitae | Hsiang Wu</title>
+  <title>使用Pandoc將LaTeX文檔轉化為Word | Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="Pandoc 可以在不同的格式之間進行相互轉換，詳見http://johnmacfarlane.net/pandoc/。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。
+然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！
+大致而言，">
 <meta property="og:type" content="website">
-<meta property="og:title" content="vitae">
-<meta property="og:url" content="http://wuhsiang.github.io/vitae/index.html">
+<meta property="og:title" content="使用Pandoc將LaTeX文檔轉化為Word">
+<meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description">
+<meta property="og:description" content="Pandoc 可以在不同的格式之間進行相互轉換，詳見http://johnmacfarlane.net/pandoc/。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。
+然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！
+大致而言，">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vitae">
-<meta name="twitter:description">
+<meta name="twitter:title" content="使用Pandoc將LaTeX文檔轉化為Word">
+<meta name="twitter:description" content="Pandoc 可以在不同的格式之間進行相互轉換，詳見http://johnmacfarlane.net/pandoc/。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。
+然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！
+大致而言，">
   
     <link rel="alternative" href="/atom.xml" title="Hsiang Wu" type="application/atom+xml">
   
@@ -67,12 +73,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Convert-Latex-file-to-Word" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/vitae/index.html" class="article-date">
-  <time datetime="2015-04-05T04:41:22.000Z" itemprop="datePublished">2015-04-05</time>
+    <a href="/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" class="article-date">
+  <time datetime="2015-04-05T15:58:23.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -81,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vitae
+      使用Pandoc將LaTeX文檔轉化為Word
     </h1>
   
 
@@ -89,19 +99,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。</p>
+<p>然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！</p>
+<p>大致而言，將.tex格式的源文檔轉化為 .docx格式，可以採用以下命令行：</p>
+<pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript.tex
+</code></pre><p>由於.tex文件中大多使用.eps格式的圖片，因此導致在Word文檔中對應的圖片無法顯示。因此可以採用如下命令行設置圖片格式：</p>
+<pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript<span class="class">.tex</span> --default-image-extension=png
+</code></pre><p>接下來，便是參考文獻的問題了。我通常為每個論文收稿都建立一個zotero分類，并將其導出成為.bib格式的參考文獻。可以採取如下方式自動將.bib格式的參考文獻以及.tex文檔一起，轉化為Word格式，并保留完整的參考文獻文中引用及文末列出。當然，還需要下載APA格式對應的apa.csl文件啦：</p>
+<pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png
+</code></pre><p>不過估計後續還是需要手動調整Word文檔的格式。万恶的Word啊，簡直是醉了！</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/vitae/index.html" data-id="ci84okx3h0003sohwq69onhm8" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci84okx3h000asohw9n8xx5mz" class="article-share-link">Share</a>
       
-        <a href="http://wuhsiang.github.io/vitae/index.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/zh-tw/Personal/Back-to-Writing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          回歸寫作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/zh-tw/Elegant-Writing/GTD/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Getting Things Done: 技術宅如何治療拖延癥？</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -196,7 +234,7 @@
 <script>
   var disqus_shortname = 'wuhsiang';
   
-  var disqus_url = 'http://wuhsiang.github.io/vitae/index.html';
+  var disqus_url = 'http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/';
   
   (function(){
     var dsq = document.createElement('script');
