@@ -107,12 +107,14 @@
 <pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript<span class="class">.tex</span> --default-image-extension=png
 </code></pre><p>接下來，便是參考文獻的問題了。我通常為每個論文收稿都建立一個zotero分類，并將其導出成為.bib格式的參考文獻。可以採取如下方式自動將.bib格式的參考文獻以及.tex文檔一起，轉化為Word格式，并保留完整的參考文獻文中引用及文末列出。當然，還需要下載APA格式對應的apa.csl文件啦：</p>
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png
+</code></pre><p>我們還可以事先在一個空白的Word文檔中設置好正文、一級標題、二級標題、單欄雙欄等格式，命名為template.docx。然後按照以下命令行生成對應格式的Word：</p>
+<pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png --reference-docx=<span class="keyword">template</span>.docx
 </code></pre><p>不過估計後續還是需要手動調整Word文檔的格式。万恶的Word啊，簡直是醉了！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci84okx3h000asohw9n8xx5mz" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci8a97hub000a30hw2zp4q590" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
