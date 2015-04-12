@@ -69,6 +69,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Citation-Type" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/zh-tw/Elegant-Writing/Citation-Type/" class="article-date">
+  <time datetime="2015-04-12T06:58:50.000Z" itemprop="datePublished">2015-04-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/zh-tw/Elegant-Writing/Citation-Type/"> 引用文獻格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在引用文獻的處理上，也是學術論文寫作中比較麻煩的事情。在不同情形下，對於引用文獻格式的要求差異較大，因此也要分別處置。</p>
+<h2 id="文獻管理軟體">文獻管理軟體</h2><p>個人使用過多種文獻管理軟體，例如Endnote，Readcube，Mendeley，Zotero，Jabref等。最後依然一直在使用的只有兩個：Zotero和Mendeley。Endnote有多麼非人道自不必說，Readcube的免費版本畢竟功能太少，而Jabref的界面總是覺得不舒服。</p>
+<p>現在一直在使用Zotero和Mendeley，並且兩者各有其分工。</p>
+<ul>
+<li><a href="https://www.zotero.org/" target="_blank" rel="external"><strong>Zotero</strong></a>: 就寫作的方便程度而言，感覺還是Zotero比較實用一些。我的一般做法是：在查找文獻的階段，為每篇論文設置一個folder，從Chrome瀏覽器上一鍵保存文獻到此folder；在寫作時文中引用的階段，使用快捷鍵獲取citation key，然後插入到論文文稿中；而在文末生成文獻的階段，則將此folder中的所有文獻批量導出為.bib格式的文件。這樣，也就完成了全過程。</li>
+<li><a href="https://www.mendeley.com/" target="_blank" rel="external"><strong>Mendeley</strong></a>: Mendeley則十分方便查閱同行的文獻閱讀與引用狀況，並且十分方便進行在線文獻閱讀。例如，我沒有帶自己的laptop，然後在別人的辦公室要呆一下午。那麼，這個時候就可以登陸網頁版的mendeley進行文獻閱讀。近期mendeley進行改進之後，在線閱讀體驗已經非常棒了。mendeley還有一個很讚的功能，即是文獻共享。假設你與A君共同完成一篇論文，那麼可以創建一個folder，將需要的文獻放入，并邀請A君加入。這樣可以方便進行文件共享和討論。</li>
+</ul>
+<h2 id="Latex文獻引用方案">Latex文獻引用方案</h2><p>在Latex中進行寫作時，十分方便。先在zotero中生成citation key，從而在TeXStudio中進行論文寫作。最後將zotero中所有相關文獻導出為.bib格式的文檔，利用Latex宏包（諸如apacite，natbib等）設置，便可以生成需要的文內引用和文末顯示格式。</p>
+<h2 id="其它文獻引用方案">其它文獻引用方案</h2><p>當需要將論文文稿轉為Word，或者直接在Pandoc Markdown中進行寫作時，就要考慮文獻引用方案了。此時便要複雜一些，具體的方案是：使用CSL（citation style language）。以下具體進行說明。</p>
+<h2 id="CSL：Citation_Style_Language">CSL：Citation Style Language</h2><p>協同使用<a href="http://docs.citationstyles.org/en/stable/index.html" target="_blank" rel="external"><strong>CSL</strong></a>和Pandoc，可以方便使用Markdown寫作，并將其轉換為需要的格式。對於CSL而言，現有上千個格式可供下載，也可以自己修改csl格式。具體可參閱以下網頁：</p>
+<ul>
+<li>CSL介紹：請參閱<a href="https://www.zotero.org/support/zh/dev/citation_styles" target="_blank" rel="external">https://www.zotero.org/support/zh/dev/citation_styles</a>。</li>
+<li>修改CSL：請參閱<a href="https://www.zotero.org/support/zh/dev/citation_styles/style_editing_step-by-step" target="_blank" rel="external">https://www.zotero.org/support/zh/dev/citation_styles/style_editing_step-by-step</a>。</li>
+</ul>
+<p>設置好引文格式csl之後，并保存為mystyle.csl格式的文件。然後在Pandoc命令中使用：</p>
+<pre><code><span class="comment">--csl mystyle.csl</span>
+</code></pre><p>來進行最後的文獻生成。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/" data-id="ci8e4rzha000ei4hwt1tztq0m" class="article-share-link">Share</a>
+      
+        <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Scholarly-oriented-Markdown" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" class="article-date">
@@ -102,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" data-id="ci8e37vpv0008vchwzuri9x24" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" data-id="ci8e4rzha0008i4hwxulvu63p" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -150,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/" data-id="ci8e37vqb000evchw74aaft5x" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/" data-id="ci8e4rzha000gi4hwl54hlgeo" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -203,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci8e37vqb000cvchw3no0mbes" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci8e4rzha000ci4hwb6thl2ki" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -266,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/" data-id="ci8e37vqb000avchwpeyqe5xa" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/" data-id="ci8e4rzha000ai4hw0o2ilegc" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -318,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/" data-id="ci8e37vqb000gvchwfds6zo9t" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/" data-id="ci8e4rzhq000ii4hwnzfp2dxg" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -361,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="ci8e37vpv0005vchw0vy1ekhz" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="ci8e4rzgv0005i4hw8eoejebj" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -405,7 +464,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/en/Personal/Welcome/" data-id="ci8e37vqb000jvchweeshxyfs" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/en/Personal/Welcome/" data-id="ci8e4rzhq000li4hwxei9qlkf" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/en/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -426,7 +485,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Scientist/">Data Scientist</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Elegant-Writing/">Elegant Writing</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Scientist/">Data Scientist</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Elegant-Writing/">Elegant Writing</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -439,7 +498,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">7</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -449,6 +508,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/zh-tw/Elegant-Writing/Citation-Type/"> 引用文獻格式</a>
+          </li>
         
           <li>
             <a href="/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/">Scholarly-oriented Markdown</a>
@@ -464,10 +527,6 @@
         
           <li>
             <a href="/zh-tw/Elegant-Writing/GTD/">Getting Things Done: 技術宅如何治療拖延癥？</a>
-          </li>
-        
-          <li>
-            <a href="/zh-cn/Data-Scientist/Sample-size/">样本容量与模型验证</a>
           </li>
         
       </ul>
