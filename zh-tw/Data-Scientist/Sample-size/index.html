@@ -3,35 +3,35 @@
 <head>
   <meta charset="utf-8">
   
-  <title>样本容量与模型验证 | Hsiang Wu</title>
+  <title>樣本容量與模型驗證 | Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="模型验证的方法模型验证有两种方法：
+  <meta name="description" content="模型驗證的方法模型驗證又兩種方法：
 
-如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它
-用概率论来测试发现的模式是否是巧合
+如果在某個數據集上發現了某種模式，那麼就用其它的數據集來驗證它
+用概率論來測試發現的模式是否是巧合
 
-前者在统计学习中十分常见，即先用训练集来发现模式，并用测试集来验证；后者则是统计学中假设检验的思路，通过诸如p值等指标来判断发现的模式是否是随机的。
-在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过抽样设计来从总体中选择样本进行研究。常见的方">
+前者在統計學習中十分常見，即先用訓練集來發現模式，並用測試集來驗證。後者則是統計學中假設檢驗的思路。通過諸如p值等指標來判斷發現的模式是否是隨機的。
+在通常情形下，總體樣本非常大，數據收集非常困難。因此，統計學者通過抽樣設計來從總體中選擇樣本進行研究。常見的方">
 <meta property="og:type" content="website">
-<meta property="og:title" content="样本容量与模型验证">
-<meta property="og:url" content="http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/index.html">
+<meta property="og:title" content="樣本容量與模型驗證">
+<meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description" content="模型验证的方法模型验证有两种方法：
+<meta property="og:description" content="模型驗證的方法模型驗證又兩種方法：
 
-如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它
-用概率论来测试发现的模式是否是巧合
+如果在某個數據集上發現了某種模式，那麼就用其它的數據集來驗證它
+用概率論來測試發現的模式是否是巧合
 
-前者在统计学习中十分常见，即先用训练集来发现模式，并用测试集来验证；后者则是统计学中假设检验的思路，通过诸如p值等指标来判断发现的模式是否是随机的。
-在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过抽样设计来从总体中选择样本进行研究。常见的方">
+前者在統計學習中十分常見，即先用訓練集來發現模式，並用測試集來驗證。後者則是統計學中假設檢驗的思路。通過諸如p值等指標來判斷發現的模式是否是隨機的。
+在通常情形下，總體樣本非常大，數據收集非常困難。因此，統計學者通過抽樣設計來從總體中選擇樣本進行研究。常見的方">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="样本容量与模型验证">
-<meta name="twitter:description" content="模型验证的方法模型验证有两种方法：
+<meta name="twitter:title" content="樣本容量與模型驗證">
+<meta name="twitter:description" content="模型驗證的方法模型驗證又兩種方法：
 
-如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它
-用概率论来测试发现的模式是否是巧合
+如果在某個數據集上發現了某種模式，那麼就用其它的數據集來驗證它
+用概率論來測試發現的模式是否是巧合
 
-前者在统计学习中十分常见，即先用训练集来发现模式，并用测试集来验证；后者则是统计学中假设检验的思路，通过诸如p值等指标来判断发现的模式是否是随机的。
-在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过抽样设计来从总体中选择样本进行研究。常见的方">
+前者在統計學習中十分常見，即先用訓練集來發現模式，並用測試集來驗證。後者則是統計學中假設檢驗的思路。通過諸如p值等指標來判斷發現的模式是否是隨機的。
+在通常情形下，總體樣本非常大，數據收集非常困難。因此，統計學者通過抽樣設計來從總體中選擇樣本進行研究。常見的方">
   
     <link rel="alternative" href="/atom.xml" title="Hsiang Wu" type="application/atom+xml">
   
@@ -87,7 +87,7 @@
       <div class="outer">
         <section id="main"><article id="post-Sample-size" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/zh-cn/Data-Scientist/Sample-size/" class="article-date">
+    <a href="/zh-tw/Data-Scientist/Sample-size/" class="article-date">
   <time datetime="2015-04-04T17:26:07.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
     
@@ -103,7 +103,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      样本容量与模型验证
+      樣本容量與模型驗證
     </h1>
   
 
@@ -111,23 +111,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="模型验证的方法">模型验证的方法</h2><p>模型验证有<a href="http://shop.oreilly.com/product/0636920018483.do" target="_blank" rel="external">两种方法</a>：</p>
+        <h2 id="模型驗證的方法">模型驗證的方法</h2><p>模型驗證又<a href="http://shop.oreilly.com/product/0636920018483.do" target="_blank" rel="external">兩種方法</a>：</p>
 <ul>
-<li>如果在某个数据集上发现了某种模式，那么就用其它的数据集来验证它</li>
-<li>用概率论来测试发现的模式是否是巧合</li>
+<li>如果在某個數據集上發現了某種模式，那麼就用其它的數據集來驗證它</li>
+<li>用概率論來測試發現的模式是否是巧合</li>
 </ul>
-<p>前者在<strong>统计学习</strong>中十分常见，即先用<strong>训练集</strong>来发现模式，并用<strong>测试集</strong>来验证；后者则是<strong>统计学</strong>中<strong>假设检验</strong>的思路，通过诸如<strong>p值</strong>等指标来判断发现的模式是否是随机的。</p>
-<p>在通常情形下，总体样本非常大，数据收集非常困难。因此，统计学者通过<strong>抽样设计</strong>来从总体中选择样本进行研究。常见的方式是<strong>随机抽样</strong>，而后续的研究也奠基于这个假设。由于数据收集成本较高，研究样本也相应较小。在此情形下，研究者采取第二种方式，通过构建模型、提出研究假设来描述对数据模式的<strong>先验判断</strong>，并进行假设检验来验证。先验判断一般基于<strong>经济学理论</strong>，辅以必要的逻辑推理。这种研究方法适宜于研究样本较少的情形，其缺点在于过渡拟合（overfitting），亦即将随机因素错误地识别为某种规律，或者说将<strong>噪音</strong>错误地识别为<strong>信号</strong>。</p>
-<p>当研究样本较大时，则可以将数据集<strong>随机</strong>分为训练集和测试集。首先试图在训练集中发现某种模式，然后通过<strong>交叉验证</strong>等方式在测试集上观测效果。训练集可能会产生<strong>多种模式</strong>，而测试集上的<strong>效果</strong>这有助于选择<strong>最佳</strong>的模式。这种研究方法适宜于研究样本较多的情形，否则将数据集进一步缩小将无法发现<strong>真实的模式</strong>（如果存在的话）。</p>
-<h2 id="大数据改变了什么？">大数据改变了什么？</h2><p>技术进步使得<strong>观测数据</strong>的获取变得更加容易。当然，收集访谈数据、问卷数据的成本并未显著降低。因此，谈论大数据时，更多地是在谈论观测数据，且大部分存在于企业的数据库中。</p>
-<p>从统计上看，样本容量有显著变化：大数据情形下，样本容量剧增，甚至可以获取总体数据。在此极端情形下，基于<strong>抽样理论</strong>的第二种模型验证方法则不再适用。因此，需要转而考虑的是基于<strong>训练—测试</strong>思路的第一种模型验证方法。因此，在考虑PlantRetail上数据集时，可能更加适合采用第一种模型验证方法。显然，此时<strong>研究总体</strong>为<strong>大型零售商</strong>而非所有零售商。如此定义研究总体的话，PlantRetail上还不是总体数据，因此第二种模型验证方法也同样适用。所以可以将二者进行<strong>比较</strong>，或许有些有趣的发现。</p>
+<p>前者在<strong>統計學習</strong>中十分常見，即先用<strong>訓練集</strong>來發現模式，並用<strong>測試集</strong>來驗證。後者則是<strong>統計學</strong>中<strong>假設檢驗</strong>的思路。通過諸如<strong>p值</strong>等指標來判斷發現的模式是否是隨機的。</p>
+<p>在通常情形下，總體樣本非常大，數據收集非常困難。因此，統計學者通過<strong>抽樣設計</strong>來從總體中選擇樣本進行研究。常見的方式是<strong>隨機抽樣</strong>，而後續的研究也是奠基於這個假設。由於數據收集成本較高，研究樣本也相應較小。在此情形下，研究者採取第二種方式，通過構建模型、提出研究假設來描述對數據模式的<strong>先驗判斷</strong>，并通過假設檢驗驗證之。先驗判斷一般基於<strong>經濟學理論</strong>，輔以必要的邏輯推理。這種研究方法適宜於研究樣本較少的情形，其缺點在於過度擬合(overfitting)，亦即將隨機因素錯誤地識別為某種規律，或者說將<strong>噪音</strong>錯誤地識別為<strong>信號</strong>。</p>
+<p>當研究樣本較大時，則可以將數據集<strong>隨機</strong>分為訓練集與測試集。首先試圖在訓練集中發現某種模式，然後通過<strong>交叉驗證</strong>等方式在測試集上觀測效果。訓練集可能會產生<strong>多種模式</strong>，而測試集上的<strong>效果</strong>則有助於選擇<strong>最佳</strong>的模式。這種研究方法適宜於研究樣本較多的情形，否則將數據集進一步縮小將無法發現<strong>真實的模式</strong>（如果存在的話）。</p>
+<h2 id="大數據改變了什麼？">大數據改變了什麼？</h2><p>技術進步使得<strong>觀測數據</strong>更加容易獲取。當然，收集訪談數據、問卷數據的成本並未顯著降低。因此，談論大數據的時候，更多是在談論觀測數據，且大部分存在於企業的數據庫中。</p>
+<p>從統計上看，樣本容量有顯著變化：大數據情境下，樣本容量劇增，甚至可以獲取總體數據。在此極端情形下，基於<strong>抽樣理論</strong>的第二種模型驗證方法則不再適用。因此，需要轉而考慮的是基於<strong>訓練—測試</strong>思路的第一種模型驗證方法。因此，在考慮PlanetRetail上的數據集時，可以多加考量。將兩種方法進行比較的話，或許有些有趣的發現。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/" data-id="ci9iph3ni000to8hwu9ol5jir" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/" data-id="ci9iqcq4v0002vkhw92s1abdx" class="article-share-link">Share</a>
       
-        <a href="http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -247,7 +247,7 @@
 <script>
   var disqus_shortname = 'wuhsiang';
   
-  var disqus_url = 'http://wuhsiang.github.io/zh-cn/Data-Scientist/Sample-size/';
+  var disqus_url = 'http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/';
   
   (function(){
     var dsq = document.createElement('script');
