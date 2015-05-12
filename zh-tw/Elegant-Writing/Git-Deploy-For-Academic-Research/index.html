@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>歡迎來到我的部落格 | Hsiang Wu</title>
+  <title>Git Deploy for Academic Research | Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我通過Hexo和GitHub建立了此部落格。在部落格中，會分享個人生活和工作中的體驗。歡迎大家常來逛逛哦！">
+  <meta name="description" content="採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！
+在使用GitHub的時候，也需要進行一些特殊的設置。
+設置忽略文件原則上講，所有中間過程中生成的臨時文件都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。
+忽略的文件類型可以在.gitignore中進行">
 <meta property="og:type" content="website">
-<meta property="og:title" content="歡迎來到我的部落格">
-<meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Personal/Welcome/index.html">
+<meta property="og:title" content="Git Deploy for Academic Research">
+<meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description" content="我通過Hexo和GitHub建立了此部落格。在部落格中，會分享個人生活和工作中的體驗。歡迎大家常來逛逛哦！">
+<meta property="og:description" content="採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！
+在使用GitHub的時候，也需要進行一些特殊的設置。
+設置忽略文件原則上講，所有中間過程中生成的臨時文件都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。
+忽略的文件類型可以在.gitignore中進行">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="歡迎來到我的部落格">
-<meta name="twitter:description" content="我通過Hexo和GitHub建立了此部落格。在部落格中，會分享個人生活和工作中的體驗。歡迎大家常來逛逛哦！">
+<meta name="twitter:title" content="Git Deploy for Academic Research">
+<meta name="twitter:description" content="採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！
+在使用GitHub的時候，也需要進行一些特殊的設置。
+設置忽略文件原則上講，所有中間過程中生成的臨時文件都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。
+忽略的文件類型可以在.gitignore中進行">
   
     <link rel="alternative" href="/atom.xml" title="Hsiang Wu" type="application/atom+xml">
   
@@ -67,14 +76,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Welcome" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Git-Deploy-For-Academic-Research" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/zh-tw/Personal/Welcome/" class="article-date">
-  <time datetime="2015-04-04T17:20:58.000Z" itemprop="datePublished">2015-04-05</time>
+    <a href="/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" class="article-date">
+  <time datetime="2015-05-12T15:14:50.000Z" itemprop="datePublished">2015-05-12</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Personal/">Personal</a>
+    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
   </div>
 
   </div>
@@ -85,7 +94,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      歡迎來到我的部落格
+      Git Deploy for Academic Research
     </h1>
   
 
@@ -93,14 +102,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我通過Hexo和GitHub建立了此部落格。在部落格中，會分享個人生活和工作中的體驗。歡迎大家常來逛逛哦！</p>
+        <p>採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！</p>
+<p>在使用GitHub的時候，也需要進行一些特殊的設置。</p>
+<h2 id="設置忽略文件">設置忽略文件</h2><p>原則上講，所有中間過程中生成的<strong>臨時文件</strong>都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。</p>
+<p>忽略的文件類型可以在.gitignore中進行設置，具體方法可參閱：<a href="https://help.github.com/articles/ignoring-files/" target="_blank" rel="external">https://help.github.com/articles/ignoring-files/</a>。由於在windows下無法直接創建沒有文件名的.gitignore文件，所以需要在Git Bash中進入專案目錄，并通過以下命令行創建：</p>
+<blockquote>
+<p> touch .gitignore </p>
+</blockquote>
+<p>然後，可以發現新建了一個.gitignore文件。接下來可以在文件中進行如下設置：</p>
+<blockquote>
+<p>  <em>.aux
+</em>.blg<br><em>.dvi
+</em>.log<br><em>.synctex.gz
+</em>-eps-converted-to.pdf</p>
+</blockquote>
+<p>於是，就可以忽略LaTeX的臨時文件啦。</p>
+<p>此外，可能很多臨時文件已經被跟蹤。此時，可以採用命令從repository中刪除臨時文件，如：</p>
+<blockquote>
+<p>git rm -f *.dvi</p>
+</blockquote>
+<p>更多詳細內容可以參見<a href="http://git.oschina.net/progit/2-Git-%E5%9F%BA%E7%A1%80.html" target="_blank" rel="external">Git基礎</a>。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="ci9liykfj000b64hwumwaffp5" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9liykg5000o64hw6vo0xvfh" class="article-share-link">Share</a>
       
-        <a href="http://wuhsiang.github.io/zh-tw/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -109,19 +137,10 @@
     
 <nav id="article-nav">
   
-    <a href="/zh-tw/Data-Scientist/Sample-size/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          樣本容量與模型驗證
-        
-      </div>
-    </a>
   
-  
-    <a href="/en/Personal/Welcome/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/zh-tw/Book-Review/Tipping-Point/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Welcome</div>
+      <div class="article-nav-title">書評：Tipping Point (引爆點)</div>
     </a>
   
 </nav>
@@ -220,7 +239,7 @@
 <script>
   var disqus_shortname = 'wuhsiang';
   
-  var disqus_url = 'http://wuhsiang.github.io/zh-tw/Personal/Welcome/';
+  var disqus_url = 'http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/';
   
   (function(){
     var dsq = document.createElement('script');
