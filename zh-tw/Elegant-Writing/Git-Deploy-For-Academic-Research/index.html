@@ -6,23 +6,35 @@
   <title>使用GitHub託管學術論文的若干設置 | Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！
-在使用GitHub的時候，也需要進行一些特殊的設置。
-設置忽略文件原則上講，所有中間過程中生成的臨時文件都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。
-忽略的文件類型可以在.gitignore中進行">
+Git流程關於Git使用流程，較好的教程有：
+
+GitHub Flow
+A successful Git branching model
+一個成功的Git分支模型
+
+存在三種分支：主分支(master)，開發分支(devel">
 <meta property="og:type" content="website">
 <meta property="og:title" content="使用GitHub託管學術論文的若干設置">
 <meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
 <meta property="og:description" content="採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！
-在使用GitHub的時候，也需要進行一些特殊的設置。
-設置忽略文件原則上講，所有中間過程中生成的臨時文件都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。
-忽略的文件類型可以在.gitignore中進行">
+Git流程關於Git使用流程，較好的教程有：
+
+GitHub Flow
+A successful Git branching model
+一個成功的Git分支模型
+
+存在三種分支：主分支(master)，開發分支(devel">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用GitHub託管學術論文的若干設置">
 <meta name="twitter:description" content="採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！
-在使用GitHub的時候，也需要進行一些特殊的設置。
-設置忽略文件原則上講，所有中間過程中生成的臨時文件都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。
-忽略的文件類型可以在.gitignore中進行">
+Git流程關於Git使用流程，較好的教程有：
+
+GitHub Flow
+A successful Git branching model
+一個成功的Git分支模型
+
+存在三種分支：主分支(master)，開發分支(devel">
   
     <link rel="alternative" href="/atom.xml" title="Hsiang Wu" type="application/atom+xml">
   
@@ -103,8 +115,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>採用GitHub的private repository來託管正在進行的學術論文是絕佳的選擇，這樣每次的更改都會被記錄，而且還可以通過GitHub的記錄來查看自己有沒有偷懶哦！</p>
-<p>在使用GitHub的時候，也需要進行一些特殊的設置。</p>
-<h2 id="設置忽略文件">設置忽略文件</h2><p>原則上講，所有中間過程中生成的<strong>臨時文件</strong>都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。</p>
+<h2 id="Git流程">Git流程</h2><p>關於Git使用流程，較好的教程有：</p>
+<ul>
+<li><a href="http://scottchacon.com/2011/08/31/github-flow.html" target="_blank" rel="external">GitHub Flow</a></li>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="external">A successful Git branching model</a></li>
+<li><a href="http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/" target="_blank" rel="external">一個成功的Git分支模型</a></li>
+</ul>
+<p>存在三種分支：主分支(master)，開發分支(develop)，和支援分支(feature, release, hotfix)。</p>
+<p>大致說來，始終存在的兩個分支是：</p>
+<ul>
+<li>master: 當develop分支上的代碼達到穩定的狀態時，就可以合併回master分支，從而發佈版本。因此，每次有變化被合併到master分支時，根據定義就是一次<strong>新的產品版本發佈</strong>。</li>
+<li>develop: 反應開發的進程。</li>
+</ul>
+<p>此外，還有一些有限壽命的分支，主要分為：</p>
+<ul>
+<li>特性分支(feature branch)： 也被成為<strong>topic分支</strong>，源自develop分支，而最終也被合併回develop分支。feature branch為即將發佈的版本開發新功能。</li>
+<li>發佈分支(release branch)：源自develop分支，而最終被合併回master和develop分支。release branch為新的產品版本發佈提供準備和支持。一般命名為：release-*。</li>
+<li>熱補丁分支(hotfix branch)：源自master分支，而最終被合併回master和develop分支。hotfix branch用於處理未預期的重大bug時，進行快速的產品<strong>bug修復</strong>。一般命名為：hotfix-*。</li>
+</ul>
+<h2 id="設置忽略文件">設置忽略文件</h2><p>在使用GitHub的時候，也需要進行一些特殊的設置。</p>
+<p>原則上講，所有中間過程中生成的<strong>臨時文件</strong>都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。</p>
 <p>忽略的文件類型可以在.gitignore中進行設置，具體方法可參閱：<a href="https://help.github.com/articles/ignoring-files/" target="_blank" rel="external">https://help.github.com/articles/ignoring-files/</a>。由於在windows下無法直接創建沒有文件名的.gitignore文件，所以需要在Git Bash中進入專案目錄，并通過以下命令行創建：</p>
 <blockquote>
 <p> touch .gitignore </p>
@@ -126,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9ljocrm000opchwzkutm0pq" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9mwtyzo000ocohw1wpfoawp" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/#disqus_thread" class="article-comment-link">Comments</a>
       
