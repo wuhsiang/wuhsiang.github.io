@@ -127,7 +127,7 @@ A successful Git branching model
 <li>master: 當develop分支上的代碼達到穩定的狀態時，就可以合併回master分支，從而發佈版本。因此，每次有變化被合併到master分支時，根據定義就是一次<strong>新的產品版本發佈</strong>。</li>
 <li>develop: 反應開發的進程。</li>
 </ul>
-<p>此外，還有一些有限壽命的分支，主要分為：</p>
+<p>此外，還有一些有限壽命的分支，這些分支被稱為支援分支，且最終都會被合併入develop或者master分支之後，再被刪除。支援分支主要分為：</p>
 <ul>
 <li>特性分支(feature branch)： 也被成為<strong>topic分支</strong>，源自develop分支，而最終也被合併回develop分支。feature branch為即將發佈的版本開發新功能。</li>
 <li>發佈分支(release branch)：源自develop分支，而最終被合併回master和develop分支。release branch為新的產品版本發佈提供準備和支持。一般命名為：release-*。</li>
@@ -156,7 +156,7 @@ A successful Git branching model
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9mwtyzo000ocohw1wpfoawp" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9niivma000obohw1s7iavb0" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/#disqus_thread" class="article-comment-link">Comments</a>
       

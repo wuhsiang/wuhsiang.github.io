@@ -5,21 +5,18 @@
   
   <title>使用Pandoc將LaTeX文檔轉化為Word | Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Pandoc 可以在不同的格式之間進行相互轉換，詳見http://johnmacfarlane.net/pandoc/。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。
-然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！
-大致而言，">
+  <meta name="description" content="LaTeX vs WordLaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。
+不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Ma">
 <meta property="og:type" content="website">
 <meta property="og:title" content="使用Pandoc將LaTeX文檔轉化為Word">
 <meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description" content="Pandoc 可以在不同的格式之間進行相互轉換，詳見http://johnmacfarlane.net/pandoc/。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。
-然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！
-大致而言，">
+<meta property="og:description" content="LaTeX vs WordLaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。
+不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Ma">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Pandoc將LaTeX文檔轉化為Word">
-<meta name="twitter:description" content="Pandoc 可以在不同的格式之間進行相互轉換，詳見http://johnmacfarlane.net/pandoc/。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。
-然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！
-大致而言，">
+<meta name="twitter:description" content="LaTeX vs WordLaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。
+不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Ma">
   
     <link rel="alternative" href="/atom.xml" title="Hsiang Wu" type="application/atom+xml">
   
@@ -99,9 +96,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。因此可以使用Pandoc Markdown進行論文寫作，并通過Pandoc將其轉化為.tex或者.docx文檔。</p>
-<p>然而，有時會直接進行LaTeX寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。當然，也可以用Pandoc來進行初期的轉化工作啦！</p>
-<p>大致而言，將.tex格式的源文檔轉化為 .docx格式，可以採用以下命令行：</p>
+        <h2 id="LaTeX_vs_Word">LaTeX vs Word</h2><p>LaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。</p>
+<p>不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Markdown進行寫作，然後再製作Latex以及Word模板，最後通過pandoc命令進行轉換，以生成最終的.tex或者.docx文檔。<strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。</p>
+<p>然而，有時事先就採用LaTeX來寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。遇到這種情景都會非常不爽，因為兩種格式體系完全是不共戴天。Latex公式和Word公式環境，簡直沒有任何共同點。對於公式較多的文檔來說，手上有.tex文件卻被要求Word文檔簡直是最大的噩夢。當然，這時也可以採用Pandoc來進行初期的轉化工作啦！</p>
+<h2 id="初期轉化">初期轉化</h2><p>大致而言，將.tex格式的源文檔轉化為 .docx格式，可以採用以下命令行：</p>
 <pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript.tex
 </code></pre><p>由於.tex文件中大多使用.eps格式的圖片，因此導致在Word文檔中對應的圖片無法顯示。因此可以採用如下命令行設置圖片格式：</p>
 <pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript<span class="class">.tex</span> --default-image-extension=png
@@ -109,12 +107,14 @@
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png
 </code></pre><p>我們還可以事先在一個空白的Word文檔中設置好正文、一級標題、二級標題、單欄雙欄等格式，命名為template.docx。然後按照以下命令行生成對應格式的Word：</p>
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png --reference-docx=<span class="keyword">template</span>.docx
-</code></pre><p>不過估計後續還是需要手動調整Word文檔的格式。万恶的Word啊，簡直是醉了！</p>
+</code></pre><p>好啦，初期的轉換工作基本也就完成啦！可以看到，轉換的效果還不錯，通過pandoc命令還是省去了大量的工作。</p>
+<h2 id="後期調整">後期調整</h2><p>不過，後續還是需要手動調整Word文檔的格式。</p>
+<p>万恶的Word啊，簡直是醉了！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci9mwtz04000scohww58kq75e" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci9niivmi000sbohwpeowuxp1" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
