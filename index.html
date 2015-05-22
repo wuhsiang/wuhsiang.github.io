@@ -118,11 +118,12 @@
 <p>參照一般的Git開發流程，我採用了以下方案：</p>
 <ul>
 <li>master branch: 用於保存穩定的研究專案狀態。換言之，用於保存已經完成初稿並且<strong>已經向期刊投稿</strong>了的研究專案。</li>
-<li>develop branch: 用於保存<strong>正在進行</strong>的研究專案。一旦研究已經完成並且投稿，則將其併入到master branch。</li>
+<li>develop branch: 用於保存<strong>正在進行</strong>的研究專案。一旦研究已經完成並且投稿，則將其併入到master branch。個人習慣命名為：project-*。</li>
 <li>feature branch: 用於某個<strong>特定的研究專案寫作</strong>。例如在private repository裡面同時有五個具體的研究專案，那麼可以分別從develop branch當中分離出來成為單獨的feature branch，並且命名為topic-*。例如在研究dynamic lot sizing的時候，我使用了如下特性分支： topic-dls-learning, topic-dls-deterioration, topic-dls-repeatpurchase等等。</li>
 <li>release branch: 較少使用。</li>
-<li>hotfix branch: 用於<strong>已經投稿的稿件的後續修改</strong>。例如，當收到審稿意見之後，可能進行的修改；或者論文拒稿之後的修改和重投等等事宜。這樣處理的邏輯在於：已經投稿的研究專案都已經保存在master branch當中，而hotfix是從master當中分離，並且最後會合併回master和develop分支的。因此，hotfix的功能很適合用於已投稿件的後續修改。</li>
+<li>hotfix branch: 用於<strong>已經投稿的稿件的後續修改</strong>。例如，當收到審稿意見之後，可能進行的修改；或者論文拒稿之後的修改和重投等等事宜。這樣處理的邏輯在於：已經投稿的研究專案都已經保存在master branch當中，而hotfix是從master當中分離，並且最後會合併回master和develop分支的。因此，hotfix的功能很適合用於已投稿件的後續修改。個人習慣命名為：revision-*。</li>
 </ul>
+<p><img src="/img/GitHub_Flow.png" alt="Github Flow for Academic Research"></p>
 <h2 id="設置忽略文件">設置忽略文件</h2><p>在使用GitHub的時候，也需要進行一些特殊的設置。</p>
 <p>原則上講，所有中間過程中生成的<strong>臨時文件</strong>都最好被忽略掉。例如，在使用LaTeX寫作的時候，就會生成很多臨時文件。</p>
 <p>忽略的文件類型可以在.gitignore中進行設置，具體方法可參閱：<a href="https://help.github.com/articles/ignoring-files/" target="_blank" rel="external">https://help.github.com/articles/ignoring-files/</a>。由於在windows下無法直接創建沒有文件名的.gitignore文件，所以需要在Git Bash中進入專案目錄，并通過以下命令行創建：</p>
@@ -146,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9xpu0ch000o0chwkl7wuyy2" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="ci9z53w62000ocwhwlz7syhsr" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -190,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/Tipping-Point/" data-id="ci9xpu0bm000d0chwf537k8ac" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/Tipping-Point/" data-id="ci9z53w5m000dcwhwfuvn4y5z" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Book-Review/Tipping-Point/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -239,7 +240,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Interesting-Websites/" data-id="ci9xpu0ch000m0chwebdeozra" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Interesting-Websites/" data-id="ci9z53w62000mcwhwblo1z5i9" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Interesting-Websites/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -295,7 +296,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/en/Microeconometrics/plan-May/" data-id="ci9xpu0cx000y0chwltb1llks" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/en/Microeconometrics/plan-May/" data-id="ci9z53w6h000ycwhwvmrz6ymj" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/en/Microeconometrics/plan-May/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -352,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/youngyangming/" data-id="ci9xpu0b600050chwsoyzkdao" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/youngyangming/" data-id="ci9z53w560005cwhwr01c85mz" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Book-Review/youngyangming/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -401,7 +402,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/pandoc-mathjax/" data-id="ci9xpu0bm00080chwsuq8ls7q" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/pandoc-mathjax/" data-id="ci9z53w5m0008cwhwbg6rogvf" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/pandoc-mathjax/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -450,7 +451,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Litearture-Reading-and-Management/" data-id="ci9xpu0c1000k0chw02o5s4n7" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Litearture-Reading-and-Management/" data-id="ci9z53w5m000kcwhwe26tymdw" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Litearture-Reading-and-Management/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -511,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/" data-id="ci9xpu0ch000u0chwiult2gyh" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/" data-id="ci9z53w62000ucwhw79tcgyrx" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -556,7 +557,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" data-id="ci9xpu0c1000f0chw6ejlmzmh" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" data-id="ci9z53w5m000fcwhwd15dkt7h" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -604,7 +605,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/" data-id="ci9xpu0cx000w0chw267prmc9" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/" data-id="ci9z53w6h000wcwhwgjdgbrwh" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -660,7 +661,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci9xpu0ch000s0chwa5b2g7bu" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="ci9z53w62000scwhwyp74a5ll" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -723,7 +724,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/" data-id="ci9xpu0ch000q0chwbu6eulzx" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/" data-id="ci9z53w62000qcwhwf4uq9bli" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -775,7 +776,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/" data-id="ci9xpu0c1000h0chwzvj58auk" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/" data-id="ci9z53w5m000hcwhwn16l3dve" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -818,7 +819,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="ci9xpu0bm000b0chw82fy35d9" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="ci9z53w5m000bcwhwglt2o9nv" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -862,7 +863,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/en/Personal/Welcome/" data-id="ci9xpu0aq00000chwe6de2x7u" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/en/Personal/Welcome/" data-id="ci9z53w4r0000cwhwp6r3oqhp" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/en/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
