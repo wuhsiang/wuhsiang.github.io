@@ -116,12 +116,9 @@
 <li>輸出為Markdown文件： 採用knitr package中的knit函數，生成對應的Markdown文件。然後定義<strong>精確的</strong>格式文件，通過pandoc生成滿足期刊需要的manuscript。</li>
 </ul>
 <p>在寫作過程中，適合輸出為HTML格式。其中，需要在論文首部定義的有：</p>
-<blockquote>
-<hr>
-<p>title: “”<br>author: “”<br>date: “”<br>output: html_document<br>csl: apa.csl</p>
-<h2 id="bibliography:_ref-bib">bibliography: ref.bib</h2></blockquote>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="string">""</span></span><br><span class="line">author: <span class="string">""</span></span><br><span class="line">date: <span class="string">""</span></span><br><span class="line">output: html_document</span><br><span class="line">csl: apa.csl</span><br><span class="line">bibliography: <span class="keyword">ref</span>.bib</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>隨之需要定義的是：</p>
-<figure class="highlight"><figcaption><span>globalsetting, echo=FALSE, cache=FALSE&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;library(knitr)&#10;opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE, fig.width = 6, fig.height = 4, fig.align = &#39;center&#39;)&#10;options(digits = 2, scipen = 8)&#10;knit_theme$set(&#34;autumn&#34;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="title">library</span><span class="params">(knitr)</span></span></span><br><span class="line">opts_chunk<span class="variable">$set</span>(warning = FALSE, message = FALSE, echo = FALSE, fig<span class="class">.width</span> = <span class="number">6</span>, fig<span class="class">.height</span> = <span class="number">4</span>, fig<span class="class">.align</span> = <span class="string">'center'</span>)</span><br><span class="line"><span class="function"><span class="title">options</span><span class="params">(digits = <span class="number">2</span>, scipen = <span class="number">8</span>)</span></span></span><br><span class="line">knit_theme<span class="variable">$set</span>(<span class="string">"autumn"</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="實用Tips">實用Tips</h2><p>在RStudio中使用R Markdown寫作時，可以採用以下快捷鍵：</p>
 <ul>
 <li>Ctrl + Alt + I: 在Rmd文檔中插入R代碼段</li>
@@ -131,7 +128,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/" data-id="cibkb2pyd000eeshw3ybpx4v8" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/" data-id="cibkb5enc000eawhwdxhutuaa" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
       

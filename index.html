@@ -103,12 +103,9 @@
 <li>輸出為Markdown文件： 採用knitr package中的knit函數，生成對應的Markdown文件。然後定義<strong>精確的</strong>格式文件，通過pandoc生成滿足期刊需要的manuscript。</li>
 </ul>
 <p>在寫作過程中，適合輸出為HTML格式。其中，需要在論文首部定義的有：</p>
-<blockquote>
-<hr>
-<p>title: “”<br>author: “”<br>date: “”<br>output: html_document<br>csl: apa.csl</p>
-<h2 id="bibliography:_ref-bib">bibliography: ref.bib</h2></blockquote>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="string">""</span></span><br><span class="line">author: <span class="string">""</span></span><br><span class="line">date: <span class="string">""</span></span><br><span class="line">output: html_document</span><br><span class="line">csl: apa.csl</span><br><span class="line">bibliography: <span class="keyword">ref</span>.bib</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>隨之需要定義的是：</p>
-<figure class="highlight"><figcaption><span>globalsetting, echo=FALSE, cache=FALSE&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;library(knitr)&#10;opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE, fig.width = 6, fig.height = 4, fig.align = &#39;center&#39;)&#10;options(digits = 2, scipen = 8)&#10;knit_theme$set(&#34;autumn&#34;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="title">library</span><span class="params">(knitr)</span></span></span><br><span class="line">opts_chunk<span class="variable">$set</span>(warning = FALSE, message = FALSE, echo = FALSE, fig<span class="class">.width</span> = <span class="number">6</span>, fig<span class="class">.height</span> = <span class="number">4</span>, fig<span class="class">.align</span> = <span class="string">'center'</span>)</span><br><span class="line"><span class="function"><span class="title">options</span><span class="params">(digits = <span class="number">2</span>, scipen = <span class="number">8</span>)</span></span></span><br><span class="line">knit_theme<span class="variable">$set</span>(<span class="string">"autumn"</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="實用Tips">實用Tips</h2><p>在RStudio中使用R Markdown寫作時，可以採用以下快捷鍵：</p>
 <ul>
 <li>Ctrl + Alt + I: 在Rmd文檔中插入R代碼段</li>
@@ -118,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/" data-id="cibkb2pyd000eeshw3ybpx4v8" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/" data-id="cibkb5enc000eawhwdxhutuaa" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -252,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/writing-in-chinese/" data-id="cibkb2pyd0006eshwbbp8f49f" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/writing-in-chinese/" data-id="cibkb5en00006awhw2pnvynwh" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/writing-in-chinese/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -300,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/desperate-days/" data-id="cibkb2pyd000beshw3w0wbdw7" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/desperate-days/" data-id="cibkb5en8000bawhw5yl1o8gv" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/desperate-days/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -390,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="cibkb2pz8000teshwd83fxdd5" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/" data-id="cibkb5enw000tawhwv44wel24" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Git-Deploy-For-Academic-Research/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -434,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/Tipping-Point/" data-id="cibkb2pys000ieshwdb4hh396" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/Tipping-Point/" data-id="cibkb5eng000iawhwxispet2k" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Book-Review/Tipping-Point/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -483,7 +480,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Interesting-Websites/" data-id="cibkb2pz8000reshwfziqca1w" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Interesting-Websites/" data-id="cibkb5ent000rawhwm3tdfn7b" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Interesting-Websites/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -539,7 +536,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/en/Microeconometrics/plan-May/" data-id="cibkb2pzn0013eshw91t6vynk" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/en/Microeconometrics/plan-May/" data-id="cibkb5eo70013awhwu5zn4jej" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/en/Microeconometrics/plan-May/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -596,7 +593,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/youngyangming/" data-id="cibkb2pyd0003eshwp0h9a39n" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Book-Review/youngyangming/" data-id="cibkb5emx0003awhwetfe9msy" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Book-Review/youngyangming/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -645,7 +642,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/pandoc-mathjax/" data-id="cibkb2pyd0009eshw2oieu3cs" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/pandoc-mathjax/" data-id="cibkb5en30009awhw7cwowtnt" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/pandoc-mathjax/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -694,7 +691,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Litearture-Reading-and-Management/" data-id="cibkb2pys000peshwd5uw96xm" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Litearture-Reading-and-Management/" data-id="cibkb5enq000pawhw0mvxpl26" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Litearture-Reading-and-Management/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -755,7 +752,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/" data-id="cibkb2pz8000zeshwyk4kgnvq" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/" data-id="cibkb5eo2000zawhwvzj21o5a" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -800,7 +797,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" data-id="cibkb2pys000keshwyv9ru6lz" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/" data-id="cibkb5enj000kawhwh1fx9htg" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Scholarly-oriented-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -848,7 +845,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/" data-id="cibkb2pz80011eshwyrcuj6fg" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/" data-id="cibkb5eo50011awhw6jijozb1" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Back-to-Writing/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -904,7 +901,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="cibkb2pz8000xeshwdszi8ev0" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="cibkb5eo1000xawhwo1bko2k6" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -967,7 +964,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/" data-id="cibkb2pz8000veshwsxavulya" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/" data-id="cibkb5eny000vawhwcdh8zxys" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/GTD/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -1019,7 +1016,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/" data-id="cibkb2pys000meshwi9lgxw8g" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/" data-id="cibkb5enn000mawhwjhrbevj3" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Data-Scientist/Sample-size/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -1062,7 +1059,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="cibkb2pys000geshwa13lgbvp" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Personal/Welcome/" data-id="cibkb5ene000gawhw9mlluka7" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -1106,7 +1103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/en/Personal/Welcome/" data-id="cibkb2pzn0016eshw9li7fykr" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/en/Personal/Welcome/" data-id="cibkb5eo90016awhw06iusy0z" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/en/Personal/Welcome/#disqus_thread" class="article-comment-link">Comments</a>
       
