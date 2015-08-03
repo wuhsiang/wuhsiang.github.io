@@ -73,7 +73,7 @@
         <section id="main"><article id="post-Convert-Latex-file-to-Word" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" class="article-date">
-  <time datetime="2015-04-05T15:58:23.000Z" itemprop="datePublished">2015-04-05</time>
+  <time datetime="2015-04-05T21:58:23.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
     
   <div class="article-category">
@@ -107,6 +107,11 @@
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png
 </code></pre><p>我們還可以事先在一個空白的Word文檔中設置好正文、一級標題、二級標題、單欄雙欄等格式，命名為template.docx。然後按照以下命令行生成對應格式的Word：</p>
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png --reference-docx=<span class="keyword">template</span>.docx
+</code></pre><p>特別地是，可以建立一個make.bat文檔，每次單擊文檔完成以上的轉換過程。對應的make.bat文檔內容為：</p>
+<pre><code><span class="variable">@ECHO</span> OFF
+pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --default-image-extension=png --reference-docx=template.docx
+<span class="variable">@ECHO</span> ON
+<span class="variable">@PAUSE</span>
 </code></pre><p>好啦，初期的轉換工作基本也就完成啦！可以看到，轉換的效果還不錯，通過pandoc命令還是省去了大量的工作。</p>
 <h2 id="後期調整">後期調整</h2><p>不過，後續還是需要手動調整Word文檔的格式。</p>
 <p>万恶的Word啊，簡直是醉了！</p>
@@ -114,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="cibkb5eo1000xawhwo1bko2k6" class="article-share-link">Share</a>
+      <a data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/" data-id="cicw9abmb000x34hwdbncp5vu" class="article-share-link">Share</a>
       
         <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#disqus_thread" class="article-comment-link">Comments</a>
       
