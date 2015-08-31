@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hsiang Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hsiang Wu">
+<meta property="og:url" content="http://wuhsiang.github.io/page/2/index.html">
+<meta property="og:site_name" content="Hsiang Wu">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hsiang Wu">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">HOME</a>
+        
+          <a class="main-nav-link" href="/about">ABOUT</a>
+        
+          <a class="main-nav-link" href="/vitae">VITAE</a>
+        
+          <a class="main-nav-link" href="/archives">ARCHIVES</a>
+        
+          <a class="main-nav-link" href="/categories">CATEGORY</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://wuhsiang.github.io"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer">
+      <article id="post-data-wrangling-with-r" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/en/Data-Scientist/data-wrangling-with-r/">Data wrangling with R</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/en/Data-Scientist/data-wrangling-with-r/" class="article-date">
+  <time datetime="2015-08-03T19:37:07.000Z" itemprop="datePublished">2015-08-03</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Data-Scientist/">Data Scientist</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/en/Data-Scientist/data-wrangling-with-r/#disqus_thread" class="article-comment-link">Comments</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="magrittr_operators">magrittr operators</h2><p><a href="https://cran.r-project.org/web/packages/magrittr/index.html" target="_blank" rel="external">magrittr</a> provides a <strong>forward-pipe operator</strong> for R. <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html" target="_blank" rel="external">Intorducing magrittr</a> gives several examples to illstrate how it works. These operators include:</p>
+<ul>
+<li>forward-pipe operator %&gt;%</li>
+<li>tree-pipe operator %T&gt;%</li>
+<li>exposition-pipe operator %$%</li>
+<li>compound assignment pipe operator %&lt;&gt;%</li>
+</ul>
+<p>%&gt;% operator has several new features:</p>
+<ol>
+<li>By default the left-hand side (LHS) will be <strong>piped in</strong> as the <strong>first argument</strong> of the function appearing on the right-hand side (RHS).</li>
+<li>When the LHS is needed at a position <strong>other than the first</strong>, we can use <strong>the dot</strong> ‘.’, <strong>as placeholder</strong>.</li>
+<li>We can use <strong>the dot</strong> to create <strong>functions</strong>, which will <strong>not</strong> be confused with a placeholder when using in the same expression.</li>
+</ol>
+<h2 id="dplyr">dplyr</h2><p><a href="https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html" target="_blank" rel="external">Introduction to dplyr</a></p>
+
+      
+    </div>
+  
+  </div>
+  
+</article>
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      </nav>
+    </section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Hsiang Wu&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+<script>
+  var disqus_shortname = 'wuhsiang';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

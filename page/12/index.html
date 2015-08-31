@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hsiang Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hsiang Wu">
+<meta property="og:url" content="http://wuhsiang.github.io/page/12/index.html">
+<meta property="og:site_name" content="Hsiang Wu">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hsiang Wu">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">HOME</a>
+        
+          <a class="main-nav-link" href="/about">ABOUT</a>
+        
+          <a class="main-nav-link" href="/vitae">VITAE</a>
+        
+          <a class="main-nav-link" href="/archives">ARCHIVES</a>
+        
+          <a class="main-nav-link" href="/categories">CATEGORY</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://wuhsiang.github.io"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer">
+      <article id="post-Citation-Type" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/zh-tw/Elegant-Writing/Citation-Type/"> 引用文獻格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/zh-tw/Elegant-Writing/Citation-Type/" class="article-date">
+  <time datetime="2015-04-12T12:58:50.000Z" itemprop="datePublished">2015-04-12</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Citation-Type/#disqus_thread" class="article-comment-link">Comments</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在引用文獻的處理上，也是學術論文寫作中比較麻煩的事情。在不同情形下，對於引用文獻格式的要求差異較大，因此也要分別處置。</p>
+<h2 id="文獻管理軟體">文獻管理軟體</h2><p>個人使用過多種文獻管理軟體，例如Endnote，Readcube，Mendeley，Zotero，Jabref等。最後依然一直在使用的只有兩個：Zotero和Mendeley。Endnote有多麼非人道自不必說，Readcube的免費版本畢竟功能太少，而Jabref的界面總是覺得不舒服。</p>
+<p>現在一直在使用Zotero和Mendeley，並且兩者各有其分工。</p>
+<ul>
+<li><a href="https://www.zotero.org/" target="_blank" rel="external"><strong>Zotero</strong></a>: 就寫作的方便程度而言，感覺還是Zotero比較實用一些。我的一般做法是：在查找文獻的階段，為每篇論文設置一個folder，從Chrome瀏覽器上一鍵保存文獻到此folder；在寫作時文中引用的階段，使用快捷鍵獲取citation key，然後插入到論文文稿中；而在文末生成文獻的階段，則將此folder中的所有文獻批量導出為.bib格式的文件。這樣，也就完成了全過程。</li>
+<li><a href="https://www.mendeley.com/" target="_blank" rel="external"><strong>Mendeley</strong></a>: Mendeley則十分方便查閱同行的文獻閱讀與引用狀況，並且十分方便進行在線文獻閱讀。例如，我沒有帶自己的laptop，然後在別人的辦公室要呆一下午。那麼，這個時候就可以登陸網頁版的mendeley進行文獻閱讀。近期mendeley進行改進之後，在線閱讀體驗已經非常棒了。mendeley還有一個很讚的功能，即是文獻共享。假設你與A君共同完成一篇論文，那麼可以創建一個folder，將需要的文獻放入，并邀請A君加入。這樣可以方便進行文件共享和討論。</li>
+</ul>
+<h2 id="Latex文獻引用方案">Latex文獻引用方案</h2><p>在Latex中進行寫作時，十分方便。先在zotero中生成citation key，從而在TeXStudio中進行論文寫作。最後將zotero中所有相關文獻導出為.bib格式的文檔，利用Latex宏包（諸如apacite，natbib等）設置，便可以生成需要的文內引用和文末顯示格式。</p>
+<h2 id="其它文獻引用方案">其它文獻引用方案</h2><p>當需要將論文文稿轉為Word，或者直接在Pandoc Markdown中進行寫作時，就要考慮文獻引用方案了。此時便要複雜一些，具體的方案是：使用CSL（citation style language）。以下具體進行說明。</p>
+<h2 id="CSL：Citation_Style_Language">CSL：Citation Style Language</h2><p>協同使用<a href="http://docs.citationstyles.org/en/stable/index.html" target="_blank" rel="external"><strong>CSL</strong></a>和Pandoc，可以方便使用Markdown寫作，并將其轉換為需要的格式。對於CSL而言，現有上千個格式可供下載，也可以自己修改csl格式。具體可參閱以下網頁：</p>
+<ul>
+<li>CSL介紹：請參閱<a href="https://www.zotero.org/support/zh/dev/citation_styles" target="_blank" rel="external">https://www.zotero.org/support/zh/dev/citation_styles</a>。</li>
+<li>修改CSL：請參閱<a href="https://www.zotero.org/support/zh/dev/citation_styles/style_editing_step-by-step" target="_blank" rel="external">https://www.zotero.org/support/zh/dev/citation_styles/style_editing_step-by-step</a>。</li>
+</ul>
+<p>對於大部分引文格式，都可以從zotero上直接找到。例如，簡體中文中常出現的格式，即可通過zotero提供的<a href="https://www.zotero.org/styles?q=numeric" target="_blank" rel="external">數字標註法</a>的引文格式列表中找到<a href="https://www.zotero.org/styles/chinese-gb7714-2005-numeric" target="_blank" rel="external">簡體中文參考文獻標準格式</a>并下載即可。</p>
+<p>對於使用LaTeX的情形，則需要使用GB/T 7714-2005文獻著述標準對應的.bst文件。具體可參閱<a href="http://blog.lehu.shu.edu.cn/shuishousong/A210123.html" target="_blank" rel="external">說明網頁</a>以及在GitHub上的<a href="https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style" target="_blank" rel="external">倉庫</a>。</p>
+<p>設置好引文格式csl之後，并保存為mystyle.csl格式的文件。然後在Pandoc命令中使用：</p>
+<pre><code><span class="comment">--csl mystyle.csl</span>
+</code></pre><p>來進行最後的文獻生成。</p>
+
+      
+    </div>
+  
+  </div>
+  
+</article>
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
+      </nav>
+    </section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Hsiang Wu&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+<script>
+  var disqus_shortname = 'wuhsiang';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hsiang Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hsiang Wu">
+<meta property="og:url" content="http://wuhsiang.github.io/page/3/index.html">
+<meta property="og:site_name" content="Hsiang Wu">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hsiang Wu">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">HOME</a>
+        
+          <a class="main-nav-link" href="/about">ABOUT</a>
+        
+          <a class="main-nav-link" href="/vitae">VITAE</a>
+        
+          <a class="main-nav-link" href="/archives">ARCHIVES</a>
+        
+          <a class="main-nav-link" href="/categories">CATEGORY</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://wuhsiang.github.io"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer">
+      <article id="post-Writing-in-R-Markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/zh-tw/Elegant-Writing/Writing-in-R-Markdown/">R Markdown寫作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/zh-tw/Elegant-Writing/Writing-in-R-Markdown/" class="article-date">
+  <time datetime="2015-07-01T10:34:06.000Z" itemprop="datePublished">2015-07-01</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="R_Markdown寫作流程">R Markdown寫作流程</h2><p>首先，進行初步的描述性統計分析（可使用R Markdown或者R）。然而進行檢驗模型，并保存主要的數據集。</p>
+<p>然後，即可在RStudio中採用R Markdown進行寫作。輸出有多種方案：</p>
+<ul>
+<li>直接輸出為HTML： 便於隨時檢視論文輸出結果，包括公式、文檔中R代碼塊生成的結果。</li>
+<li>輸出為MS WORD或者PDF： 便於和其他合作者進行溝通交流。</li>
+<li>輸出為Markdown文件： 採用knitr package中的knit函數，生成對應的Markdown文件。然後定義<strong>精確的</strong>格式文件，通過pandoc生成滿足期刊需要的manuscript。</li>
+</ul>
+<p>在寫作過程中，適合輸出為HTML格式。其中，需要在論文首部定義的有：</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="string">""</span></span><br><span class="line">author: <span class="string">""</span></span><br><span class="line">date: <span class="string">""</span></span><br><span class="line">output: html_document</span><br><span class="line">csl: apa.csl</span><br><span class="line">bibliography: <span class="keyword">ref</span>.bib</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>隨之需要定義的是：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="title">library</span><span class="params">(knitr)</span></span></span><br><span class="line">opts_chunk<span class="variable">$set</span>(warning = FALSE, message = FALSE, echo = FALSE, fig<span class="class">.width</span> = <span class="number">6</span>, fig<span class="class">.height</span> = <span class="number">4</span>, fig<span class="class">.align</span> = <span class="string">'center'</span>)</span><br><span class="line"><span class="function"><span class="title">options</span><span class="params">(digits = <span class="number">2</span>, scipen = <span class="number">8</span>)</span></span></span><br><span class="line">knit_theme<span class="variable">$set</span>(<span class="string">"autumn"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="實用Tips">實用Tips</h2><p>在RStudio中使用R Markdown寫作時，可以採用以下快捷鍵：</p>
+<ul>
+<li>Ctrl + Alt + I: 在Rmd文檔中插入R代碼段</li>
+<li>Ctrl + Shift + M: 使用pipe operator %&gt;%</li>
+</ul>
+
+      
+    </div>
+  
+  </div>
+  
+</article>
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      </nav>
+    </section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Hsiang Wu&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+<script>
+  var disqus_shortname = 'wuhsiang';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
