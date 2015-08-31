@@ -86,25 +86,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="LaTeX_vs_Word">LaTeX vs Word</h2><p>LaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。</p>
-<p>不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Markdown進行寫作，然後再製作Latex以及Word模板，最後通過pandoc命令進行轉換，以生成最終的.tex或者.docx文檔。<strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。</p>
+<p>不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Markdown進行寫作，然後再製作Latex以及Word模板，最後通過pandoc命令進行轉換，以生成最終的.tex或者.docx文檔。<strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/">http://johnmacfarlane.net/pandoc/</a>。</p>
 <p>然而，有時事先就採用LaTeX來寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。遇到這種情景都會非常不爽，因為兩種格式體系完全是不共戴天。Latex公式和Word公式環境，簡直沒有任何共同點。對於公式較多的文檔來說，手上有.tex文件卻被要求Word文檔簡直是最大的噩夢。當然，這時也可以採用Pandoc來進行初期的轉化工作啦！</p>
-<h2 id="初期轉化">初期轉化</h2><p>大致而言，將.tex格式的源文檔轉化為 .docx格式，可以採用以下命令行：</p>
-<pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript.tex
-</code></pre><p>由於.tex文件中大多使用.eps格式的圖片，因此導致在Word文檔中對應的圖片無法顯示。因此可以採用如下命令行設置圖片格式：</p>
-<pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript<span class="class">.tex</span> --default-image-extension=png
-</code></pre><p>接下來，便是參考文獻的問題了。我通常為每個論文收稿都建立一個zotero分類，并將其導出成為.bib格式的參考文獻。可以採取如下方式自動將.bib格式的參考文獻以及.tex文檔一起，轉化為Word格式，并保留完整的參考文獻文中引用及文末列出。當然，還需要下載APA格式對應的apa.csl文件啦：</p>
-<pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png
-</code></pre><p>我們還可以事先在一個空白的Word文檔中設置好正文、一級標題、二級標題、單欄雙欄等格式，命名為template.docx。然後按照以下命令行生成對應格式的Word：</p>
-<pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png --reference-docx=<span class="keyword">template</span>.docx
-</code></pre><p>特別地是，可以建立一個make.bat文檔，每次單擊文檔完成以上的轉換過程。對應的make.bat文檔內容為：</p>
-<pre><code><span class="variable">@ECHO</span> OFF
-pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --default-image-extension=png --reference-docx=template.docx
-<span class="variable">@ECHO</span> ON
-<span class="variable">@PAUSE</span>
-</code></pre><p>好啦，初期的轉換工作基本也就完成啦！可以看到，轉換的效果還不錯，通過pandoc命令還是省去了大量的工作。</p>
-<h2 id="後期調整">後期調整</h2><p>不過，後續還是需要手動調整Word文檔的格式。</p>
-<p>万恶的Word啊，簡直是醉了！</p>
-
+        
+          <p class="article-more-link">
+            <a href="/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/#more">Read More</a>
+          </p>
+        
       
     </div>
   
@@ -146,27 +134,11 @@ pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --def
     <div class="article-entry" itemprop="articleBody">
       
         <p>相信很多人與我一樣，都有著嚴重的拖延癥。那麼，有三大利器可以幫助治療拖延癥： Trello, RememberTheMilk,以及Google Calendar。</p>
-<h2 id="Trello">Trello</h2><p>Trello非常適合用於<a href="http://sisarina.com/blog/trello-the-best-project-management-app-ever" target="_blank" rel="external">專案管理(Project Management)</a>，根據其設置共分為四個層級：</p>
-<ul>
-<li>Board: 每個賬號下可以管理多個Board，一般而言，一個專案對應一個Board。</li>
-<li>List: 可以進行專案的流程劃分，或者劃分為子專案。例如在進行某個專案時，可以採取“開發-測試-整合”等流程設置List。</li>
-<li>Card: 根據任務設置Card，並且通過Member和Deadline的功能來進行協作以及進度控制。</li>
-<li>CheckList: 具體事項。</li>
-</ul>
-<p>此外，Trello也非常適合多人協作。在Trello中，有以下協作方式：</p>
-<ul>
-<li>Member: 在每個Board或者Card當中，都可以加入協作者。</li>
-<li>Activity: 對於每個Card，可以通過附件attachment以及評論來進行具體任務的討論。</li>
-</ul>
-<h2 id="Remember_The_Milk">Remember The Milk</h2><p>當在研究所裡面的時候，可以使用<a href="http://www.rememberthemilk.com/" target="_blank" rel="external">RememberTheMilk</a>每天對任務進行打印。這樣非常方便進度的管理。</p>
-<p>當然，我個人喜歡在Lab裡面使用它。此外，和Trello配合使用也是非常讚的！具體的做法是：</p>
-<ul>
-<li>在Trello中進行長期的專案管理。例如，處理半年或者更長時間的各項專案。</li>
-<li>在Card層級上，亦即任務層級上，配合使用RememberTheMilk使用。每天打印出具體的Card。具體到每天，具體到每個任務(Card)。</li>
-<li>在每個任務下面的具體事項(Tasks, CheckList)，依然採用Trello進行管理。</li>
-</ul>
-<h2 id="Google_Calendar">Google Calendar</h2><p>最喜歡的功能是SMS提醒。當不在研究所或者辦公室的時候，可以讓Google Calendar傳短訊來提醒你該做什麼！當然，則需要手機號碼通過Google的短訊驗證，並且經過簡單的設置就可以啦。曾經有好長一段時間，我都是每天晚上寫好第二天的日程，然後讓Google Calendar發短訊來提醒我什麼時候應該去什麼地方做什麼事情，想想也是醉了！</p>
-
+        
+          <p class="article-more-link">
+            <a href="/zh-tw/Elegant-Writing/GTD/#more">Read More</a>
+          </p>
+        
       
     </div>
   
@@ -207,17 +179,17 @@ pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --def
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="模型驗證的方法">模型驗證的方法</h2><p>模型驗證又<a href="http://shop.oreilly.com/product/0636920018483.do" target="_blank" rel="external">兩種方法</a>：</p>
+        <h2 id="模型驗證的方法">模型驗證的方法</h2><p>模型驗證又<a href="http://shop.oreilly.com/product/0636920018483.do">兩種方法</a>：</p>
 <ul>
 <li>如果在某個數據集上發現了某種模式，那麼就用其它的數據集來驗證它</li>
 <li>用概率論來測試發現的模式是否是巧合</li>
 </ul>
 <p>前者在<strong>統計學習</strong>中十分常見，即先用<strong>訓練集</strong>來發現模式，並用<strong>測試集</strong>來驗證。後者則是<strong>統計學</strong>中<strong>假設檢驗</strong>的思路。通過諸如<strong>p值</strong>等指標來判斷發現的模式是否是隨機的。</p>
-<p>在通常情形下，總體樣本非常大，數據收集非常困難。因此，統計學者通過<strong>抽樣設計</strong>來從總體中選擇樣本進行研究。常見的方式是<strong>隨機抽樣</strong>，而後續的研究也是奠基於這個假設。由於數據收集成本較高，研究樣本也相應較小。在此情形下，研究者採取第二種方式，通過構建模型、提出研究假設來描述對數據模式的<strong>先驗判斷</strong>，并通過假設檢驗驗證之。先驗判斷一般基於<strong>經濟學理論</strong>，輔以必要的邏輯推理。這種研究方法適宜於研究樣本較少的情形，其缺點在於過度擬合(overfitting)，亦即將隨機因素錯誤地識別為某種規律，或者說將<strong>噪音</strong>錯誤地識別為<strong>信號</strong>。</p>
-<p>當研究樣本較大時，則可以將數據集<strong>隨機</strong>分為訓練集與測試集。首先試圖在訓練集中發現某種模式，然後通過<strong>交叉驗證</strong>等方式在測試集上觀測效果。訓練集可能會產生<strong>多種模式</strong>，而測試集上的<strong>效果</strong>則有助於選擇<strong>最佳</strong>的模式。這種研究方法適宜於研究樣本較多的情形，否則將數據集進一步縮小將無法發現<strong>真實的模式</strong>（如果存在的話）。</p>
-<h2 id="大數據改變了什麼？">大數據改變了什麼？</h2><p>技術進步使得<strong>觀測數據</strong>更加容易獲取。當然，收集訪談數據、問卷數據的成本並未顯著降低。因此，談論大數據的時候，更多是在談論觀測數據，且大部分存在於企業的數據庫中。</p>
-<p>從統計上看，樣本容量有顯著變化：大數據情境下，樣本容量劇增，甚至可以獲取總體數據。在此極端情形下，基於<strong>抽樣理論</strong>的第二種模型驗證方法則不再適用。因此，需要轉而考慮的是基於<strong>訓練—測試</strong>思路的第一種模型驗證方法。因此，在考慮PlanetRetail上的數據集時，可以多加考量。將兩種方法進行比較的話，或許有些有趣的發現。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/zh-tw/Data-Scientist/Sample-size/#more">Read More</a>
+          </p>
+        
       
     </div>
   

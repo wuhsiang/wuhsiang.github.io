@@ -90,6 +90,7 @@
         <h2 id="LaTeX_vs_Word">LaTeX vs Word</h2><p>LaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。</p>
 <p>不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Markdown進行寫作，然後再製作Latex以及Word模板，最後通過pandoc命令進行轉換，以生成最終的.tex或者.docx文檔。<strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。</p>
 <p>然而，有時事先就採用LaTeX來寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。遇到這種情景都會非常不爽，因為兩種格式體系完全是不共戴天。Latex公式和Word公式環境，簡直沒有任何共同點。對於公式較多的文檔來說，手上有.tex文件卻被要求Word文檔簡直是最大的噩夢。當然，這時也可以採用Pandoc來進行初期的轉化工作啦！</p>
+<a id="more"></a>
 <h2 id="初期轉化">初期轉化</h2><p>大致而言，將.tex格式的源文檔轉化為 .docx格式，可以採用以下命令行：</p>
 <pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript.tex
 </code></pre><p>由於.tex文件中大多使用.eps格式的圖片，因此導致在Word文檔中對應的圖片無法顯示。因此可以採用如下命令行設置圖片格式：</p>
