@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo部落格中展示數據分析 - Hsiang Wu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用Hexo可以快速部署部落格，并將部落格託管在GitHub上。部落格寫作在Markdown編輯器中進行，可以完全專注寫作本身。因此，Hexo絕對是目前為止最好的部落格平台。然而除了一般的文本之外，我們有時還需要展示一些數據分析的原理、算法和例子。此時便涉及到了數學公式、代碼以及圖表。當然，我們不願意先得到分析結果，再從外部Ctrl + C/V到部落格正文。作為重度強迫症患者，我們希望沿襲文學編程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo部落格中展示數據分析">
+<meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/data-analysis-display-in-hexo/index.html">
+<meta property="og:site_name" content="Hsiang Wu">
+<meta property="og:description" content="使用Hexo可以快速部署部落格，并將部落格託管在GitHub上。部落格寫作在Markdown編輯器中進行，可以完全專注寫作本身。因此，Hexo絕對是目前為止最好的部落格平台。然而除了一般的文本之外，我們有時還需要展示一些數據分析的原理、算法和例子。此時便涉及到了數學公式、代碼以及圖表。當然，我們不願意先得到分析結果，再從外部Ctrl + C/V到部落格正文。作為重度強迫症患者，我們希望沿襲文學編程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo部落格中展示數據分析">
+<meta name="twitter:description" content="使用Hexo可以快速部署部落格，并將部落格託管在GitHub上。部落格寫作在Markdown編輯器中進行，可以完全專注寫作本身。因此，Hexo絕對是目前為止最好的部落格平台。然而除了一般的文本之外，我們有時還需要展示一些數據分析的原理、算法和例子。此時便涉及到了數學公式、代碼以及圖表。當然，我們不願意先得到分析結果，再從外部Ctrl + C/V到部落格正文。作為重度強迫症患者，我們希望沿襲文學編程">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">X. Wu&#39;s Blog</a>
+        
+          <a class="main-nav-link" href="/about">ABOUT</a>
+        
+          <a class="main-nav-link" href="/contact">CONTACT</a>
+        
+          <a class="main-nav-link" href="/archives">ARCHIVES</a>
+        
+          <a class="main-nav-link" href="/categories">CATEGORY</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://wuhsiang.github.io"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-data-analysis-display-in-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo部落格中展示數據分析
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/zh-tw/Elegant-Writing/data-analysis-display-in-hexo/" class="article-date">
+  <time datetime="2015-09-02T19:24:44.000Z" itemprop="datePublished">2015-09-02</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/data-analysis-display-in-hexo/#disqus_thread" class="article-comment-link">评论</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>可以快速部署部落格，并將部落格託管在GitHub上。部落格寫作在Markdown編輯器中進行，可以完全專注寫作本身。因此，<strong>Hexo</strong>絕對是目前為止最好的部落格平台。然而除了一般的文本之外，我們有時還需要展示一些數據分析的原理、算法和例子。此時便涉及到了<strong>數學公式</strong>、<strong>代碼</strong>以及<strong>圖表</strong>。當然，我們不願意先得到分析結果，再從外部<code>Ctrl + C/V</code>到部落格正文。作為<strong>重度強迫症患者</strong>，我們希望沿襲<a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank" rel="external">文學編程</a>思想，將代碼和文字集中在同一個文件裡面。在此情形下，又該如何方便進行寫作以及Hexo配置呢？</p>
+<p>本文介紹在Hexo部落格中數據分析的<strong>高效寫作</strong>及<strong>方便展示</strong>的方法：</p>
+<ul>
+<li>配置：進行MathJax公式支持的配置</li>
+<li>寫作：在RStudio中採用R Markdown進行原始文檔寫作</li>
+<li>運行：採用<a href="https://cran.r-project.org/web/packages/knitr/index.html" target="_blank" rel="external">Knitr package</a>中的<strong>knit</strong>命令生成包含統計結果的markdown文件</li>
+<li>微調：進行細微調整</li>
+</ul>
+<a id="more"></a>
+<h2 id="配置：hexo-math">配置：hexo-math</h2><p>基本的Hexo並不支持Markdown中公式的顯示。因此，需要安裝<strong>hexo-math</strong>并進行簡單配置來支持公式顯示。配置過程分為三步：</p>
+<p>首先，<strong>安裝</strong>hexo-math:</p>
+<pre><code>$ npm install hexo-<span class="built_in">math</span> <span class="comment">--save</span>
+</code></pre><p>其次，在Blog文件夾中進行初始化：</p>
+<pre><code>$ hexo math <span class="keyword">install</span>
+</code></pre><p>最後，在<code>_config.yml</code>文件中添加plugin:</p>
+<pre><code><span class="label">plugins:</span>
+    - hexo-math
+</code></pre><p>如此，便配置好了MathJax環境。雖不能盡如人意，但還是可以大體正常顯示數學公式。</p>
+<h2 id="寫作：_R_Markdown源文件">寫作： R Markdown源文件</h2><p>進行統計分析的時候，當然首選<strong><a href="https://www.rstudio.com/" target="_blank" rel="external">RStudio</a></strong>編輯器下的<a href="http://rmarkdown.rstudio.com/" target="_blank" rel="external">R Markdown</a>格式。文字部分遵循通常的Markdown語法，而R代碼塊內部的內容則遵循通常的R語法。因此，寫作十分方便。</p>
+<h2 id="運行：Knit">運行：Knit</h2><p>為了得到統計分析結果，只需要採用<a href="https://cran.r-project.org/web/packages/knitr/index.html" target="_blank" rel="external">Knitr package</a>中的<strong>knit</strong>命令來生成對應的markdown文件即可。當然，也可以直接在RStudio裡面點擊<code>Knit HTML</code>並且勾選<code>keep markdowm source file</code>以生成Markdown文件。</p>
+<h2 id="微調">微調</h2><p>最後，微調生成的Markdown文件。主要包括兩個部分：</p>
+<ul>
+<li>修復顯示錯誤的數學公式：由於hexo-math並不完美，所以才有這一步。</li>
+<li>更改圖片目錄：將生成的圖片統一複製到Blog文件夾的<code>/source/img/</code>中，并更改Markdown文件中對應的圖片路徑。</li>
+</ul>
+<p>好啦，大功告成！快來試試吧！</p>
+
+      
+    </div>
+  
+    <footer class="article-footer">
+      
+    </footer>
+  
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/en/Data-Scientist/RW-Metropolis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">An example of Random Walk Metropolis Algorithm&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Hsiang Wu&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+<script>
+  var disqus_shortname = 'wuhsiangsblog';
+  
+  var disqus_url = 'http://wuhsiang.github.io/zh-tw/Elegant-Writing/data-analysis-display-in-hexo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
