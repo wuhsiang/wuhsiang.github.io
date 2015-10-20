@@ -54,6 +54,167 @@
   </div>
 </header>
     <section id="main" class="outer">
+      <article id="post-independence-metro" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/en/Data-Scientist/independence-metro/"> An example of Independence Metropolis Algorithm (with R code)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/en/Data-Scientist/independence-metro/" class="article-date">
+  <time datetime="2015-10-20T01:25:07.000Z" itemprop="datePublished">2015-10-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Data-Scientist/">Data Scientist</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/en/Data-Scientist/independence-metro/#disqus_thread" class="article-comment-link">Comments</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>independence Metropolis</strong> algorithm as follows[^rossi]:</p>
+<ol>
+<li>Start with $$ \theta_{0} $$.</li>
+<li>Draw $$ \vartheta \sim q_{\text{imp}} $$.</li>
+<li>Compute $$ \alpha = \text{min} {1, \frac{\pi(\vartheta) / q<em>{\text{imp}}(\vartheta)}{\pi(\theta) / q</em>{\text{imp}}(\theta)} } $$.</li>
+<li>With probability $$ \alpha $$, $$ \theta<em>{1} = \vartheta $$, else $$ \theta</em>{1} = \theta_{0} $$.</li>
+<li>Repeat, as necessary.</li>
+</ol>
+<p>If $$ q $$ is very close to $$ \pi $$, then most draws will be accepted since the ratio in the $$ \alpha $$ computation will be close to one. The independence Metropolis chain always works well for <strong>low-dimensional</strong> problems.</p>
+<h2 id="R_Implementation">R Implementation</h2><p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $$ \alpha = -2 $$, $$ \beta = 4 $$ and $$ \sigma = 1 $$. </p>
+        
+          <p class="article-more-link">
+            <a href="/en/Data-Scientist/independence-metro/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+  
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-gibbs-sampler" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/en/Data-Scientist/gibbs-sampler/">An example of Gibbs sampler (with R code)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/en/Data-Scientist/gibbs-sampler/" class="article-date">
+  <time datetime="2015-10-20T01:24:07.000Z" itemprop="datePublished">2015-10-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Data-Scientist/">Data Scientist</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/en/Data-Scientist/gibbs-sampler/#disqus_thread" class="article-comment-link">Comments</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Algorithm">Algorithm</h2><p>Gibbs sampler <strong>cycles through</strong> a set of <strong>conditional distributions</strong> of $$\pi$$. If we break $$\theta$$ into several “groups” or “blocks” of parameters, then the Gibbs sampler can be presented as[^rossi]:</p>
+<ol>
+<li>Start with initial values $$\theta_{0}$$.</li>
+<li>Sample from<br>$$\begin{array}<br>{lll}<br>\theta<em>{11} &amp; \sim &amp; f</em>{1}(\theta<em>{1} | \theta</em>{02}, …,\theta<em>{0p}) \<br>\theta</em>{12} &amp; \sim &amp; f<em>{2}(\theta</em>{2} | \theta<em>{11}, \theta</em>{03}, …,\theta<em>{0p}) \<br>.. &amp; .. &amp; .. \<br>\theta</em>{1p} &amp; \sim &amp; f<em>{p}(\theta</em>{p} | \theta<em>{11}, …, \theta</em>{1,p-1})<br>\end{array}<br>$$<br>to obtain the first iterate.</li>
+<li>Repeat, as necessary.</li>
+</ol>
+<h2 id="An_example">An example</h2><p>Consider the latent variable formulation of the binary probit model:<br>$$\begin{array}<br>{ll}<br>&amp; z<em>{i} = x</em>{i}’ \beta + \varepsilon<em>{i}, \ \varepsilon</em>{i} \sim N(0,1) \<br>&amp; y<em>{i} = 0 \text{ if } z</em>{i} &lt; 0;\  y = 1 \text{ otherwise}.<br>\end{array}<br>$$</p>
+        
+          <p class="article-more-link">
+            <a href="/en/Data-Scientist/gibbs-sampler/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+  
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-RW-Metropolis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/en/Data-Scientist/RW-Metropolis/">An example of Randow-Walk Metropolis algorithm (with R code)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/en/Data-Scientist/RW-Metropolis/" class="article-date">
+  <time datetime="2015-10-20T01:20:07.000Z" itemprop="datePublished">2015-10-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Data-Scientist/">Data Scientist</a>
+  </div>
+
+      
+        <div class="article-comment-link-wrap">
+          <a href="http://wuhsiang.github.io/en/Data-Scientist/RW-Metropolis/#disqus_thread" class="article-comment-link">Comments</a>
+        </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Random-Walk_Metropolis_algorithm">Random-Walk Metropolis algorithm</h1><h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>Gaussian Random-Walk Metropolis algorithm</strong> as follows:</p>
+<ol>
+<li>Start with $$ \theta_{0} $$ .</li>
+<li>Draw $$ \vartheta = \theta_{i} + \varepsilon $$ , $$ \varepsilon \sim N(0, s^{2} \Sigma) $$ .</li>
+<li>Compute $$ \alpha = min { 1, \pi(\vartheta) / \pi(\theta_{i}) } $$ .</li>
+<li>With probability $$ \alpha $$  to <strong>move</strong> and probability (1 - $$ \alpha $$ ) to <strong>stay</strong>.</li>
+<li>Repeat, as necessary.</li>
+</ol>
+<p>In the RW Metropolis, we must choose the increment <strong>covariance matrix</strong> $$ \Sigma $$  and the <strong>scaling factor</strong> $$ s $$ . We often simply choose $$ \Sigma $$  to be either $$ I $$ or the asymptotic covariance matrix. Thereby, the scaling of the RW Metropolis is critical to its successful use. In practice, we can choose the initial scaling factor as a function of the dimension $$ s_{0} = 2.93 / \sqrt{d} $$  according to the Roberts and Rosenthal guidelines. For more details, please refer to the Chapter 3 in Rossi et al. (2012)[^rossi].</p>
+        
+          <p class="article-more-link">
+            <a href="/en/Data-Scientist/RW-Metropolis/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+  
+  </div>
+  
+</article>
+
+
+    
       <article id="post-writing-phd-thesis-in-latex" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -153,60 +314,6 @@
 
 
     
-      <article id="post-RW-Metropolis" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/Data-Scientist/RW-Metropolis/">An example of Random Walk Metropolis Algorithm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/en/Data-Scientist/RW-Metropolis/" class="article-date">
-  <time datetime="2015-09-01T21:12:27.000Z" itemprop="datePublished">2015-09-01</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Data-Scientist/">Data Scientist</a>
-  </div>
-
-      
-        <div class="article-comment-link-wrap">
-          <a href="http://wuhsiang.github.io/en/Data-Scientist/RW-Metropolis/#disqus_thread" class="article-comment-link">Comments</a>
-        </div>
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="RW_Metropolis_algorithms">RW Metropolis algorithms</h2><p>We can present the <strong>Gaussian Random-Walk Metropolis algorithm</strong> as follows:</p>
-<ol>
-<li>Start with $\theta_{0}$.</li>
-<li>Draw $\vartheta = \theta_{i} + \varepsilon$, $\varepsilon \sim N(0, s^{2} \Sigma)$.</li>
-<li>Compute $\alpha = \text{min} \{ 1, \pi(\vartheta) / \pi(\theta_{i}) \}$.</li>
-<li>With probability $\alpha$ to <strong>move</strong> and probability (1 - $\alpha$) to <strong>stay</strong>.</li>
-<li>Repeat, as necessary.</li>
-</ol>
-<p>In the RW Metropolis, we must choose the increment <strong>covariance matrix</strong> $\Sigma$ and the <strong>scaling factor</strong> $s$. We often simply choose $\Sigma$ to be either $I$ or the asymptotic covariance matrix. Thereby, the scaling of the RW Metropolis is critical to its successful use. In practice, we can choose the initial scaling factor as a function of the dimension $s_{0} = 2.93 / \sqrt{d}$  according to the Roberts and Rosenthal guidelines. For more details, please refer to the Chapter 3 in <strong>Rossi et al. (2012)</strong>.</p>
-        
-          <p class="article-more-link">
-            <a href="/en/Data-Scientist/RW-Metropolis/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-  
-  </div>
-  
-</article>
-
-
-    
       <article id="post-Excellent-R-Books" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -242,104 +349,6 @@
         
           <p class="article-more-link">
             <a href="/zh-tw/Data-Scientist/Excellent-R-Books/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-  
-  </div>
-  
-</article>
-
-
-    
-      <article id="post-data-wrangling-with-r" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/Data-Scientist/data-wrangling-with-r/">Data wrangling with R</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/en/Data-Scientist/data-wrangling-with-r/" class="article-date">
-  <time datetime="2015-08-03T19:37:07.000Z" itemprop="datePublished">2015-08-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Data-Scientist/">Data Scientist</a>
-  </div>
-
-      
-        <div class="article-comment-link-wrap">
-          <a href="http://wuhsiang.github.io/en/Data-Scientist/data-wrangling-with-r/#disqus_thread" class="article-comment-link">Comments</a>
-        </div>
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="magrittr_operators">magrittr operators</h2><p><a href="https://cran.r-project.org/web/packages/magrittr/index.html">magrittr</a> provides a <strong>forward-pipe operator</strong> for R. <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">Intorducing magrittr</a> gives several examples to illstrate how it works. These operators include:</p>
-<ul>
-<li>forward-pipe operator %&gt;%</li>
-<li>tree-pipe operator %T&gt;%</li>
-<li>exposition-pipe operator %$%</li>
-<li>compound assignment pipe operator %&lt;&gt;%</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/en/Data-Scientist/data-wrangling-with-r/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-  
-  </div>
-  
-</article>
-
-
-    
-      <article id="post-Writing-in-R-Markdown" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zh-tw/Elegant-Writing/Writing-in-R-Markdown/">R Markdown寫作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/zh-tw/Elegant-Writing/Writing-in-R-Markdown/" class="article-date">
-  <time datetime="2015-07-01T10:34:06.000Z" itemprop="datePublished">2015-07-01</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Elegant-Writing/">Elegant Writing</a>
-  </div>
-
-      
-        <div class="article-comment-link-wrap">
-          <a href="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/#disqus_thread" class="article-comment-link">Comments</a>
-        </div>
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>對於數據分析人員而言，需要將公式表述、統計分析、可視化展示、結果闡釋等內容整合為單獨的文檔。在此情形之下，<a href="https://en.wikipedia.org/wiki/Literate_programming">文學化編程</a>的思想就十分有益啦。在<a href="https://www.rstudio.com/">RStudio編輯器</a>以及<a href="https://cran.r-project.org/web/packages/knitr/index.html">knitr</a>的配合之下，進行數據分析則完全是一種享受！</p>
-        
-          <p class="article-more-link">
-            <a href="/zh-tw/Elegant-Writing/Writing-in-R-Markdown/#more">Read More</a>
           </p>
         
       
