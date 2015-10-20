@@ -85,16 +85,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>independence Metropolis</strong> algorithm as follows (Rossi et al. 2012):</p>
-<ol>
-<li>Start with $\theta_{0}$.</li>
-<li>Draw $\vartheta \sim q_{\text{imp}}$.</li>
-<li>Compute $\alpha = \text{min} {1, \frac{\pi(\vartheta) / q<em>{\text{imp}}(\vartheta)}{\pi(\theta) / q</em>{\text{imp}}(\theta)} }$.</li>
-<li>With probability $\alpha$, $\theta<em>{1} = \vartheta$, else $\theta</em>{1} = \theta_{0}$.</li>
-<li>Repeat, as necessary.</li>
-</ol>
-<p>If $q$ is very close to $\pi$, then most draws will be accepted since the ratio in the $\alpha$ computation will be close to one. The independence Metropolis chain always works well for <strong>low-dimensional</strong> problems.</p>
-<h2 id="R_Implementation">R Implementation</h2><p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $\alpha = -2$, $\beta = 4$ and $\sigma = 1$. </p>
+        <p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $\alpha = -2$, $\beta = 4$ and $\sigma = 1$. </p>
         
           <p class="article-more-link">
             <a href="/en/Data-Scientist/independence-metro/#more">Read More</a>
@@ -140,13 +131,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Algorithm">Algorithm</h2><p>Gibbs sampler <strong>cycles through</strong> a set of <strong>conditional distributions</strong> of $$\pi$$. If we break $$\theta$$ into several “groups” or “blocks” of parameters, then the Gibbs sampler can be presented as[^rossi]:</p>
-<ol>
-<li>Start with initial values $\theta_{0}$.</li>
-<li>Sample from<br>$$\begin{array}<br>{lll}<br>\theta<em>{11} &amp; \sim &amp; f</em>{1}(\theta<em>{1} | \theta</em>{02}, …,\theta<em>{0p}) \<br>\theta</em>{12} &amp; \sim &amp; f<em>{2}(\theta</em>{2} | \theta<em>{11}, \theta</em>{03}, …,\theta<em>{0p}) \<br>.. &amp; .. &amp; .. \<br>\theta</em>{1p} &amp; \sim &amp; f<em>{p}(\theta</em>{p} | \theta<em>{11}, …, \theta</em>{1,p-1})<br>\end{array}<br>$$<br>to obtain the first iterate.</li>
-<li>Repeat, as necessary.</li>
-</ol>
-<h2 id="An_example">An example</h2><p>Consider the latent variable formulation of the binary probit model:<br>$$\begin{array}<br>{ll}<br>&amp; z<em>{i} = x</em>{i}’ \beta + \varepsilon<em>{i}, \ \varepsilon</em>{i} \sim N(0,1) \<br>&amp; y<em>{i} = 0 \text{ if } z</em>{i} &lt; 0;\  y = 1 \text{ otherwise}.<br>\end{array}<br>$$</p>
+        <p>Consider the latent variable formulation of the binary probit model:<br>$$<br>z<em>{i} = x</em>{i}’ \beta + \epsilon<em>{i}, \epsilon</em>{i} \sim N(0,1)<br>$$<br>and $y<em>{i} = 0$ if $z</em>{i} &lt; 0$.</p>
         
           <p class="article-more-link">
             <a href="/en/Data-Scientist/gibbs-sampler/#more">Read More</a>
@@ -192,15 +177,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Random-Walk_Metropolis_algorithm">Random-Walk Metropolis algorithm</h1><h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>Gaussian Random-Walk Metropolis algorithm</strong> as follows:</p>
-<ol>
-<li>Start with $$ \theta_{0} $$ .</li>
-<li>Draw $$ \vartheta = \theta_{i} + \varepsilon $$ , $$ \varepsilon \sim N(0, s^{2} \Sigma) $$ .</li>
-<li>Compute $$ \alpha = min { 1, \pi(\vartheta) / \pi(\theta_{i}) } $$ .</li>
-<li>With probability $$ \alpha $$  to <strong>move</strong> and probability (1 - $$ \alpha $$ ) to <strong>stay</strong>.</li>
-<li>Repeat, as necessary.</li>
-</ol>
-<p>In the RW Metropolis, we must choose the increment <strong>covariance matrix</strong> $$ \Sigma $$  and the <strong>scaling factor</strong> $$ s $$ . We often simply choose $$ \Sigma $$  to be either $$ I $$ or the asymptotic covariance matrix. Thereby, the scaling of the RW Metropolis is critical to its successful use. In practice, we can choose the initial scaling factor as a function of the dimension $$ s_{0} = 2.93 / \sqrt{d} $$  according to the Roberts and Rosenthal guidelines. For more details, please refer to the Chapter 3 in Rossi et al. (2012)[^rossi].</p>
+        <p>In the RW Metropolis, we must choose the increment <strong>covariance matrix</strong> $\Sigma$  and the <strong>scaling factor</strong> $s$ . We often simply choose $\Sigma$  to be either $I$ or the asymptotic covariance matrix. Thereby, the scaling of the RW Metropolis is critical to its successful use. In practice, we can choose the initial scaling factor as a function of the dimension $s_{0} = 2.93 / \sqrt{d}$  according to the Roberts and Rosenthal guidelines. For more details, please refer to the Chapter 3 in Rossi et al. (2012).</p>
         
           <p class="article-more-link">
             <a href="/en/Data-Scientist/RW-Metropolis/#more">Read More</a>
