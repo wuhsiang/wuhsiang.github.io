@@ -62,7 +62,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/en/Data-Scientist/independence-metro/"> An example of Independence Metropolis Algorithm (with R code)</a>
+      <a class="article-title" href="/en/Data-Scientist/independence-metro/"> An example of Independence Metropolis algorithm (with R code)</a>
     </h1>
   
 
@@ -85,16 +85,16 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>independence Metropolis</strong> algorithm as follows[^rossi]:</p>
+        <h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>independence Metropolis</strong> algorithm as follows (Rossi et al. 2012):</p>
 <ol>
-<li>Start with $$ \theta_{0} $$.</li>
-<li>Draw $$ \vartheta \sim q_{\text{imp}} $$.</li>
-<li>Compute $$ \alpha = \text{min} {1, \frac{\pi(\vartheta) / q<em>{\text{imp}}(\vartheta)}{\pi(\theta) / q</em>{\text{imp}}(\theta)} } $$.</li>
-<li>With probability $$ \alpha $$, $$ \theta<em>{1} = \vartheta $$, else $$ \theta</em>{1} = \theta_{0} $$.</li>
+<li>Start with $\theta_{0}$.</li>
+<li>Draw $\vartheta \sim q_{\text{imp}}$.</li>
+<li>Compute $\alpha = \text{min} {1, \frac{\pi(\vartheta) / q<em>{\text{imp}}(\vartheta)}{\pi(\theta) / q</em>{\text{imp}}(\theta)} }$.</li>
+<li>With probability $\alpha$, $\theta<em>{1} = \vartheta$, else $\theta</em>{1} = \theta_{0}$.</li>
 <li>Repeat, as necessary.</li>
 </ol>
-<p>If $$ q $$ is very close to $$ \pi $$, then most draws will be accepted since the ratio in the $$ \alpha $$ computation will be close to one. The independence Metropolis chain always works well for <strong>low-dimensional</strong> problems.</p>
-<h2 id="R_Implementation">R Implementation</h2><p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $$ \alpha = -2 $$, $$ \beta = 4 $$ and $$ \sigma = 1 $$. </p>
+<p>If $q$ is very close to $\pi$, then most draws will be accepted since the ratio in the $\alpha$ computation will be close to one. The independence Metropolis chain always works well for <strong>low-dimensional</strong> problems.</p>
+<h2 id="R_Implementation">R Implementation</h2><p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $\alpha = -2$, $\beta = 4$ and $\sigma = 1$. </p>
         
           <p class="article-more-link">
             <a href="/en/Data-Scientist/independence-metro/#more">Read More</a>
@@ -142,7 +142,7 @@
       
         <h2 id="Algorithm">Algorithm</h2><p>Gibbs sampler <strong>cycles through</strong> a set of <strong>conditional distributions</strong> of $$\pi$$. If we break $$\theta$$ into several “groups” or “blocks” of parameters, then the Gibbs sampler can be presented as[^rossi]:</p>
 <ol>
-<li>Start with initial values $$\theta_{0}$$.</li>
+<li>Start with initial values $\theta_{0}$.</li>
 <li>Sample from<br>$$\begin{array}<br>{lll}<br>\theta<em>{11} &amp; \sim &amp; f</em>{1}(\theta<em>{1} | \theta</em>{02}, …,\theta<em>{0p}) \<br>\theta</em>{12} &amp; \sim &amp; f<em>{2}(\theta</em>{2} | \theta<em>{11}, \theta</em>{03}, …,\theta<em>{0p}) \<br>.. &amp; .. &amp; .. \<br>\theta</em>{1p} &amp; \sim &amp; f<em>{p}(\theta</em>{p} | \theta<em>{11}, …, \theta</em>{1,p-1})<br>\end{array}<br>$$<br>to obtain the first iterate.</li>
 <li>Repeat, as necessary.</li>
 </ol>

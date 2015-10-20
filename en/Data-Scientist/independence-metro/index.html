@@ -3,30 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title> An example of Independence Metropolis Algorithm (with R code) - Hsiang Wu</title>
+  <title> An example of Independence Metropolis algorithm (with R code) - Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="AlgorithmWe can present the independence Metropolis algorithm as follows[^rossi]:
+  <meta name="description" content="AlgorithmWe can present the independence Metropolis algorithm as follows (Rossi et al. 2012):
 
-Start with $$ \theta_{0} $$.
-Draw $$ \vartheta \sim q_{\text{imp}} $$.
-Compute $$ \alpha = \text{min} {1, \frac{\pi(\">
+Start with $\theta_{0}$.
+Draw $\vartheta \sim q_{\text{imp}}$.
+Compute $\alpha = \text{min} {1, \frac{\pi">
 <meta property="og:type" content="website">
-<meta property="og:title" content=" An example of Independence Metropolis Algorithm (with R code)">
+<meta property="og:title" content=" An example of Independence Metropolis algorithm (with R code)">
 <meta property="og:url" content="http://wuhsiang.github.io/en/Data-Scientist/independence-metro/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description" content="AlgorithmWe can present the independence Metropolis algorithm as follows[^rossi]:
+<meta property="og:description" content="AlgorithmWe can present the independence Metropolis algorithm as follows (Rossi et al. 2012):
 
-Start with $$ \theta_{0} $$.
-Draw $$ \vartheta \sim q_{\text{imp}} $$.
-Compute $$ \alpha = \text{min} {1, \frac{\pi(\">
-<meta property="og:image" content="img/independence-metropolis-1.png">
+Start with $\theta_{0}$.
+Draw $\vartheta \sim q_{\text{imp}}$.
+Compute $\alpha = \text{min} {1, \frac{\pi">
+<meta property="og:image" content="/img/independence-metropolis-1.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" An example of Independence Metropolis Algorithm (with R code)">
-<meta name="twitter:description" content="AlgorithmWe can present the independence Metropolis algorithm as follows[^rossi]:
+<meta name="twitter:title" content=" An example of Independence Metropolis algorithm (with R code)">
+<meta name="twitter:description" content="AlgorithmWe can present the independence Metropolis algorithm as follows (Rossi et al. 2012):
 
-Start with $$ \theta_{0} $$.
-Draw $$ \vartheta \sim q_{\text{imp}} $$.
-Compute $$ \alpha = \text{min} {1, \frac{\pi(\">
+Start with $\theta_{0}$.
+Draw $\vartheta \sim q_{\text{imp}}$.
+Compute $\alpha = \text{min} {1, \frac{\pi">
   
   
     <link rel="icon" href="/favicon.png">
@@ -74,7 +74,7 @@ Compute $$ \alpha = \text{min} {1, \frac{\pi(\">
         
   
     <h1 class="article-title" itemprop="name">
-       An example of Independence Metropolis Algorithm (with R code)
+       An example of Independence Metropolis algorithm (with R code)
     </h1>
   
 
@@ -97,21 +97,21 @@ Compute $$ \alpha = \text{min} {1, \frac{\pi(\">
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>independence Metropolis</strong> algorithm as follows[^rossi]:</p>
+        <h2 id="Algorithm">Algorithm</h2><p>We can present the <strong>independence Metropolis</strong> algorithm as follows (Rossi et al. 2012):</p>
 <ol>
-<li>Start with $$ \theta_{0} $$.</li>
-<li>Draw $$ \vartheta \sim q_{\text{imp}} $$.</li>
-<li>Compute $$ \alpha = \text{min} {1, \frac{\pi(\vartheta) / q<em>{\text{imp}}(\vartheta)}{\pi(\theta) / q</em>{\text{imp}}(\theta)} } $$.</li>
-<li>With probability $$ \alpha $$, $$ \theta<em>{1} = \vartheta $$, else $$ \theta</em>{1} = \theta_{0} $$.</li>
+<li>Start with $\theta_{0}$.</li>
+<li>Draw $\vartheta \sim q_{\text{imp}}$.</li>
+<li>Compute $\alpha = \text{min} {1, \frac{\pi(\vartheta) / q<em>{\text{imp}}(\vartheta)}{\pi(\theta) / q</em>{\text{imp}}(\theta)} }$.</li>
+<li>With probability $\alpha$, $\theta<em>{1} = \vartheta$, else $\theta</em>{1} = \theta_{0}$.</li>
 <li>Repeat, as necessary.</li>
 </ol>
-<p>If $$ q $$ is very close to $$ \pi $$, then most draws will be accepted since the ratio in the $$ \alpha $$ computation will be close to one. The independence Metropolis chain always works well for <strong>low-dimensional</strong> problems.</p>
-<h2 id="R_Implementation">R Implementation</h2><p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $$ \alpha = -2 $$, $$ \beta = 4 $$ and $$ \sigma = 1 $$. </p>
+<p>If $q$ is very close to $\pi$, then most draws will be accepted since the ratio in the $\alpha$ computation will be close to one. The independence Metropolis chain always works well for <strong>low-dimensional</strong> problems.</p>
+<h2 id="R_Implementation">R Implementation</h2><p>We consider a simple example:<br>$$<br>y = \alpha + \beta x + \epsilon, \epsilon \sim N(0, \sigma^{2}),<br>$$<br>and test the Independence Metropolis algorithm by simulated data. We set $\alpha = -2$, $\beta = 4$ and $\sigma = 1$. </p>
 <a id="more"></a>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">rm(list = ls())</span><br><span class="line">library(MASS)</span><br><span class="line">library(magrittr)</span><br><span class="line"><span class="comment"># independence metropolis algorithm, with normal distribution proposal function</span></span><br><span class="line">ind.metropolis &lt;- <span class="function"><span class="keyword">function</span>(<span class="title">ptarget</span>, <span class="title">start</span>.<span class="title">value</span>, <span class="title">mu</span>, <span class="title">sigma</span>,</span></span><br><span class="line">                           N = <span class="number">2e4</span>, burnin = <span class="number">5e3</span>)&#123;</span><br><span class="line">    <span class="comment"># initiation</span></span><br><span class="line">    nvar &lt;- <span class="built_in">length</span>(<span class="built_in">start</span>.<span class="built_in">value</span>)</span><br><span class="line">    chain &lt;- matrix(<span class="number">0</span>, nrow = N, ncol = nvar)</span><br><span class="line">    current.<span class="built_in">value</span> &lt;- <span class="built_in">start</span>.<span class="built_in">value</span></span><br><span class="line">    chain[<span class="number">1</span>, ] &lt;- <span class="built_in">start</span>.<span class="built_in">value</span></span><br><span class="line">    Sigma &lt;- sigma^<span class="number">2</span> * diag(nvar - <span class="number">1</span>)</span><br><span class="line">    <span class="comment"># main interation loops</span></span><br><span class="line">    <span class="keyword">for</span> (i <span class="operator">in</span> <span class="number">2</span>:N)&#123;</span><br><span class="line">        <span class="comment"># get the new proposal vector</span></span><br><span class="line">        next.<span class="built_in">value</span> &lt;- c(mvrnorm(n = <span class="number">1</span>, mu[-nvar], Sigma), truncated.<span class="keyword">normal</span>(mu[nvar], sigma, <span class="number">0</span>, <span class="number">3</span>))</span><br><span class="line">        <span class="comment"># calculate the ratio</span></span><br><span class="line">        current.d &lt;- dnorm(current.<span class="built_in">value</span>, mu, sigma, <span class="built_in">log</span> = <span class="constant">TRUE</span>) %&gt;% <span class="built_in">sum</span></span><br><span class="line">        next.d &lt;- dnorm(next.<span class="built_in">value</span>, mu, sigma, <span class="built_in">log</span> = <span class="constant">TRUE</span>) %&gt;% <span class="built_in">sum</span></span><br><span class="line">        ratio &lt;- ptarget(next.<span class="built_in">value</span>) + current.d - ptarget(current.<span class="built_in">value</span>) - next.d</span><br><span class="line">        <span class="comment"># calculate the acceptance rate</span></span><br><span class="line">        acceptance.rate &lt;- <span class="built_in">min</span>(<span class="number">0</span>, ratio)</span><br><span class="line">        <span class="comment"># get the next value</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">log</span>(runif(<span class="number">1</span>)) &lt; acceptance.rate)&#123;</span><br><span class="line">            current.<span class="built_in">value</span> &lt;- next.<span class="built_in">value</span></span><br><span class="line">        &#125;</span><br><span class="line">        chain[i,] &lt;- current.<span class="built_in">value</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="constant">return</span>(chain[(burnin + <span class="number">1</span>):N,]) <span class="comment"># return stable density</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># simulated multiregression data</span></span><br><span class="line"><span class="built_in">set</span>.seed(<span class="number">1234</span>)</span><br><span class="line">n.sample &lt;- <span class="number">1000</span></span><br><span class="line">X &lt;- c(rep(<span class="number">1</span>, n.sample), rnorm(n.sample, mean = <span class="number">12</span>, sd = <span class="number">4</span>)) %&gt;% matrix(ncol = <span class="number">2</span>)</span><br><span class="line">beta.<span class="constant">true</span> &lt;- c(-<span class="number">2</span>, <span class="number">4</span>)</span><br><span class="line">sigma.<span class="constant">true</span> &lt;- <span class="number">1</span></span><br><span class="line">y &lt;- X %*% beta.<span class="constant">true</span> + rnorm(n.sample, mean = <span class="number">0</span>, sd = sigma.<span class="constant">true</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># construct the posterior density</span></span><br><span class="line">ptarget &lt;- <span class="function"><span class="keyword">function</span>(<span class="title">parameter</span>.<span class="title">est</span>)&#123;</span></span><br><span class="line">    prior &lt;- dnorm(parameter.est[<span class="number">1</span>:<span class="number">2</span>], sd = <span class="number">5</span>, <span class="built_in">log</span> = <span class="constant">TRUE</span>) %&gt;% <span class="built_in">sum</span>() + dunif(parameter.est[<span class="number">3</span>], <span class="built_in">min</span> = <span class="number">0</span>, <span class="built_in">max</span> = <span class="number">3</span>, <span class="built_in">log</span> = <span class="constant">TRUE</span>)</span><br><span class="line">    likelihood &lt;- dnorm(y, mean = X %*% parameter.est[<span class="number">1</span>:<span class="number">2</span>], sd = parameter.est[<span class="number">3</span>], <span class="built_in">log</span> = <span class="constant">TRUE</span>) %&gt;% <span class="built_in">sum</span></span><br><span class="line">    <span class="constant">return</span>(prior + likelihood)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># define the truncated normal distribution</span></span><br><span class="line">truncated.<span class="keyword">normal</span> &lt;- <span class="function"><span class="keyword">function</span>(<span class="title">mu</span>, <span class="title">sigma</span>, <span class="title">a</span>, <span class="title">b</span>)&#123;</span></span><br><span class="line">    phi.<span class="operator">a</span> &lt;- pnorm(<span class="operator">a</span>, mean = mu, sd = sigma)</span><br><span class="line">    phi.b &lt;- pnorm(b, mean = mu, sd = sigma)</span><br><span class="line">    <span class="comment"># using length(mu) to extend it to vectors</span></span><br><span class="line">    <span class="constant">return</span>(mu + sigma * qnorm(runif(<span class="built_in">length</span>(mu)) * (phi.b - phi.<span class="operator">a</span>) + phi.<span class="operator">a</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># report the results</span></span><br><span class="line"><span class="built_in">start</span>.<span class="built_in">value</span> &lt;- c(<span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>)</span><br><span class="line">mu &lt;- c(-<span class="number">3</span>, <span class="number">6</span>, <span class="number">2</span>)</span><br><span class="line">sigma &lt;- <span class="number">2</span></span><br><span class="line">u &lt;- ind.metropolis(ptarget, <span class="built_in">start</span>.<span class="built_in">value</span>, mu, sigma)</span><br><span class="line">posterior &lt;- u %&gt;% <span class="keyword">as</span>.vector()</span><br><span class="line">var &lt;- c(rep(<span class="string">"intercept"</span>, nrow(u)), rep(<span class="string">"beta"</span>, nrow(u)), rep(<span class="string">"sigma"</span>, nrow(u))) %&gt;% <span class="keyword">as</span>.factor()</span><br><span class="line">ind.res &lt;- data.frame(posterior, var)</span><br><span class="line"><span class="comment"># plot the posterior density</span></span><br><span class="line">ind.res %&gt;% ggplot(aes(x = posterior, colour = var)) + geom_density()</span><br></pre></td></tr></table></figure>
-<p><img src="img/independence-metropolis-1.png" alt="Posterior Probability Distribution"> </p>
-<p>We can compare these distributions with the true values $$ \alpha = -2 $$, $$ \beta = 4 $$ and $$ \sigma = 1 $$.</p>
-<p>[^rossi]: Rossi, P. E., Allenby, G. M., &amp; McCulloch, R. (2012). Bayesian statistics and marketing. John Wiley &amp; Sons.</p>
+<p><img src="/img/independence-metropolis-1.png" alt="Posterior Probability Distribution"> </p>
+<p>We can compare these distributions with the true values $\alpha = -2$, $\beta = 4$ and $\sigma = 1$.</p>
+<h2 id="References">References</h2><p>Rossi, P. E., Allenby, G. M., &amp; McCulloch, R. (2012). Bayesian statistics and marketing. John Wiley &amp; Sons.</p>
 
       
     </div>
