@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>使用Pandoc將LaTeX文檔轉化為Word - Hsiang Wu</title>
+  <title>使用Pandoc将LaTeX文档转化为Word - Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LaTeX vs WordLaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。
-不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Ma">
+  <meta name="description" content="LaTeX vs WordLaTeX与Word似乎是不共戴天的，习惯于使用Latex的写作者恐怕就再也无法忍受Word了。虽然Latex那满天飞的反斜杠和折腾人的浮动环境让人不爽，但是比起Word来却是好了太多。
+不论写作者自己习惯于用什么，但是在准备出版的时候却不得不遵循刊物的格式规定。有很多刊物都硬性规定只能用Latex或者Word排版。当然，不错的解决的办法是先用Markdown或者R Ma">
 <meta property="og:type" content="website">
-<meta property="og:title" content="使用Pandoc將LaTeX文檔轉化為Word">
+<meta property="og:title" content="使用Pandoc将LaTeX文档转化为Word">
 <meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description" content="LaTeX vs WordLaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。
-不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Ma">
+<meta property="og:description" content="LaTeX vs WordLaTeX与Word似乎是不共戴天的，习惯于使用Latex的写作者恐怕就再也无法忍受Word了。虽然Latex那满天飞的反斜杠和折腾人的浮动环境让人不爽，但是比起Word来却是好了太多。
+不论写作者自己习惯于用什么，但是在准备出版的时候却不得不遵循刊物的格式规定。有很多刊物都硬性规定只能用Latex或者Word排版。当然，不错的解决的办法是先用Markdown或者R Ma">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Pandoc將LaTeX文檔轉化為Word">
-<meta name="twitter:description" content="LaTeX vs WordLaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。
-不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Ma">
+<meta name="twitter:title" content="使用Pandoc将LaTeX文档转化为Word">
+<meta name="twitter:description" content="LaTeX vs WordLaTeX与Word似乎是不共戴天的，习惯于使用Latex的写作者恐怕就再也无法忍受Word了。虽然Latex那满天飞的反斜杠和折腾人的浮动环境让人不爽，但是比起Word来却是好了太多。
+不论写作者自己习惯于用什么，但是在准备出版的时候却不得不遵循刊物的格式规定。有很多刊物都硬性规定只能用Latex或者Word排版。当然，不错的解决的办法是先用Markdown或者R Ma">
   
   
     <link rel="icon" href="/favicon.png">
@@ -64,7 +64,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      使用Pandoc將LaTeX文檔轉化為Word
+      使用Pandoc将LaTeX文档转化为Word
     </h1>
   
 
@@ -83,26 +83,26 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="LaTeX_vs_Word">LaTeX vs Word</h2><p>LaTeX與Word似乎是不共戴天的，習慣於使用Latex的寫作者恐怕就再也無法忍受Word了。雖然Latex那滿天飛的反斜杠和折騰人的浮動環境讓人不爽，但是比起Word來卻是好了太多。</p>
-<p>不論寫作者自己習慣於用什麼，但是在準備出版的時候卻不得不遵循刊物的格式規定。有很多刊物都硬性規定只能用Latex或者Word排版。當然，不錯的解決的辦法是先用Markdown或者R Markdown進行寫作，然後再製作Latex以及Word模板，最後通過pandoc命令進行轉換，以生成最終的.tex或者.docx文檔。<strong>Pandoc</strong> 可以在不同的格式之間進行相互轉換，詳見<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。</p>
-<p>然而，有時事先就採用LaTeX來寫作，而某些期刊卻又要求投稿時使用Word格式文檔。這時頭痛的事情便來了。遇到這種情景都會非常不爽，因為兩種格式體系完全是不共戴天。Latex公式和Word公式環境，簡直沒有任何共同點。對於公式較多的文檔來說，手上有.tex文件卻被要求Word文檔簡直是最大的噩夢。當然，這時也可以採用Pandoc來進行初期的轉化工作啦！</p>
+        <h2 id="LaTeX_vs_Word">LaTeX vs Word</h2><p>LaTeX与Word似乎是不共戴天的，习惯于使用Latex的写作者恐怕就再也无法忍受Word了。虽然Latex那满天飞的反斜杠和折腾人的浮动环境让人不爽，但是比起Word来却是好了太多。</p>
+<p>不论写作者自己习惯于用什么，但是在准备出版的时候却不得不遵循刊物的格式规定。有很多刊物都硬性规定只能用Latex或者Word排版。当然，不错的解决的办法是先用Markdown或者R Markdown进行写作，然后再制作Latex以及Word模板，最后通过pandoc命令进行转换，以生成最终的.tex或者.docx文档。<strong>Pandoc</strong> 可以在不同的格式之间进行相互转换，详见<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="external">http://johnmacfarlane.net/pandoc/</a>。</p>
+<p>然而，有时事先就採用LaTeX来写作，而某些期刊却又要求投稿时使用Word格式文档。这时头痛的事情便来了。遇到这种情景都会非常不爽，因为两种格式体系完全是不共戴天。Latex公式和Word公式环境，简直没有任何共同点。对于公式较多的文档来说，手上有.tex文件却被要求Word文档简直是最大的噩梦。当然，这时也可以採用Pandoc来进行初期的转化工作啦！</p>
 <a id="more"></a>
-<h2 id="初期轉化">初期轉化</h2><p>大致而言，將.tex格式的源文檔轉化為 .docx格式，可以採用以下命令行：</p>
+<h2 id="初期转化">初期转化</h2><p>大致而言，将.tex格式的源文档转化为 .docx格式，可以採用以下命令行：</p>
 <pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript.tex
-</code></pre><p>由於.tex文件中大多使用.eps格式的圖片，因此導致在Word文檔中對應的圖片無法顯示。因此可以採用如下命令行設置圖片格式：</p>
+</code></pre><p>由于.tex文件中大多使用.eps格式的图片，因此导致在Word文档中对应的图片无法显示。因此可以採用如下命令行设置图片格式：</p>
 <pre><code>pandoc -s -o manuscript<span class="class">.docx</span> manuscript<span class="class">.tex</span> --default-image-extension=png
-</code></pre><p>接下來，便是參考文獻的問題了。我通常為每個論文收稿都建立一個zotero分類，并將其導出成為.bib格式的參考文獻。可以採取如下方式自動將.bib格式的參考文獻以及.tex文檔一起，轉化為Word格式，并保留完整的參考文獻文中引用及文末列出。當然，還需要下載APA格式對應的apa.csl文件啦：</p>
+</code></pre><p>接下来，便是参考文献的问题了。我通常为每个论文手稿都建立一个zotero分类，并将其导出成为.bib格式的参考文献。可以採取如下方式自动将.bib格式的参考文献以及.tex文档一起，转化为Word格式，并保留完整的参考文献文中引用及文末列出。当然，还需要下载APA格式对应的apa.csl文件啦：</p>
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png
-</code></pre><p>我們還可以事先在一個空白的Word文檔中設置好正文、一級標題、二級標題、單欄雙欄等格式，命名為template.docx。然後按照以下命令行生成對應格式的Word：</p>
+</code></pre><p>我们还可以事先在一个空白的Word文档中设置好正文、一级标题、二级标题、单栏双栏等格式，命名为template.docx。然后按照以下命令行生成对应格式的Word：</p>
 <pre><code>pandoc -s -o manuscript.docx manuscript.tex --biblio <span class="keyword">ref</span>.bib --csl apa.csl --default-image-extension=png --reference-docx=<span class="keyword">template</span>.docx
-</code></pre><p>特別地是，可以建立一個make.bat文檔，每次單擊文檔完成以上的轉換過程。對應的make.bat文檔內容為：</p>
+</code></pre><p>特别地是，可以建立一个make.bat文档，每次单击文档完成以上的转换过程。对应的make.bat文档内容为：</p>
 <pre><code><span class="variable">@ECHO</span> OFF
 pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --default-image-extension=png --reference-docx=template.docx
 <span class="variable">@ECHO</span> ON
 <span class="variable">@PAUSE</span>
-</code></pre><p>好啦，初期的轉換工作基本也就完成啦！可以看到，轉換的效果還不錯，通過pandoc命令還是省去了大量的工作。</p>
-<h2 id="後期調整">後期調整</h2><p>不過，後續還是需要手動調整Word文檔的格式。</p>
-<p>万恶的Word啊，簡直是醉了！</p>
+</code></pre><p>好啦，初期的转换工作基本也就完成啦！可以看到，转换的效果还不错，通过pandoc命令还是省去了大量的工作。</p>
+<h2 id="后期调整">后期调整</h2><p>不过，后续还是需要手动调整Word文档的格式。</p>
+<p>万恶的Word啊，简直是醉了！</p>
 
       
     </div>
@@ -126,7 +126,7 @@ pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --def
   
   
     <a href="/zh-tw/Elegant-Writing/GTD/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Getting Things Done: 技術宅如何治療拖延癥？&nbsp;<span>&gt;</span></div>
+      <div class="article-nav-title">Getting Things Done: 技术宅如何治疗拖延症？&nbsp;<span>&gt;</span></div>
     </a>
   
 </nav>
@@ -137,7 +137,7 @@ pandoc -s -o manuscript.docx manuscript.tex --biblio ref.bib --csl apa.csl --def
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Convert-Latex-file-to-Word" data-title="使用Pandoc將LaTeX文檔轉化為Word" data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/"></div>
+    <div class="ds-thread" data-thread-key="post-Convert-Latex-file-to-Word" data-title="使用Pandoc将LaTeX文档转化为Word" data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Convert-Latex-file-to-Word/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">

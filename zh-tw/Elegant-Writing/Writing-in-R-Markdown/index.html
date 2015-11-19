@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>R Markdown寫作 - Hsiang Wu</title>
+  <title>R Markdown写作 - Hsiang Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="對於數據分析人員而言，需要將公式表述、統計分析、可視化展示、結果闡釋等內容整合為單獨的文檔。在此情形之下，文學化編程的思想就十分有益啦。在RStudio編輯器以及knitr的配合之下，進行數據分析則完全是一種享受！">
+  <meta name="description" content="对于数据分析人员而言，需要将公式表述、统计分析、可视化展示、结果阐释等内容整合为单独的文档。在此情形之下，文学化编程的思想就十分有益啦。在RStudio编辑器以及knitr的配合之下，进行数据分析则完全是一种享受！">
 <meta property="og:type" content="website">
-<meta property="og:title" content="R Markdown寫作">
+<meta property="og:title" content="R Markdown写作">
 <meta property="og:url" content="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/index.html">
 <meta property="og:site_name" content="Hsiang Wu">
-<meta property="og:description" content="對於數據分析人員而言，需要將公式表述、統計分析、可視化展示、結果闡釋等內容整合為單獨的文檔。在此情形之下，文學化編程的思想就十分有益啦。在RStudio編輯器以及knitr的配合之下，進行數據分析則完全是一種享受！">
+<meta property="og:description" content="对于数据分析人员而言，需要将公式表述、统计分析、可视化展示、结果阐释等内容整合为单独的文档。在此情形之下，文学化编程的思想就十分有益啦。在RStudio编辑器以及knitr的配合之下，进行数据分析则完全是一种享受！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="R Markdown寫作">
-<meta name="twitter:description" content="對於數據分析人員而言，需要將公式表述、統計分析、可視化展示、結果闡釋等內容整合為單獨的文檔。在此情形之下，文學化編程的思想就十分有益啦。在RStudio編輯器以及knitr的配合之下，進行數據分析則完全是一種享受！">
+<meta name="twitter:title" content="R Markdown写作">
+<meta name="twitter:description" content="对于数据分析人员而言，需要将公式表述、统计分析、可视化展示、结果阐释等内容整合为单独的文档。在此情形之下，文学化编程的思想就十分有益啦。在RStudio编辑器以及knitr的配合之下，进行数据分析则完全是一种享受！">
   
   
     <link rel="icon" href="/favicon.png">
@@ -61,7 +61,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      R Markdown寫作
+      R Markdown写作
     </h1>
   
 
@@ -80,22 +80,22 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>對於數據分析人員而言，需要將公式表述、統計分析、可視化展示、結果闡釋等內容整合為單獨的文檔。在此情形之下，<a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank" rel="external">文學化編程</a>的思想就十分有益啦。在<a href="https://www.rstudio.com/" target="_blank" rel="external">RStudio編輯器</a>以及<a href="https://cran.r-project.org/web/packages/knitr/index.html" target="_blank" rel="external">knitr</a>的配合之下，進行數據分析則完全是一種享受！</p>
+        <p>对于数据分析人员而言，需要将公式表述、统计分析、可视化展示、结果阐释等内容整合为单独的文档。在此情形之下，<a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank" rel="external">文学化编程</a>的思想就十分有益啦。在<a href="https://www.rstudio.com/" target="_blank" rel="external">RStudio编辑器</a>以及<a href="https://cran.r-project.org/web/packages/knitr/index.html" target="_blank" rel="external">knitr</a>的配合之下，进行数据分析则完全是一种享受！</p>
 <a id="more"></a>
-<h2 id="R_Markdown寫作流程">R Markdown寫作流程</h2><p>首先，進行初步的描述性統計分析（可使用R Markdown或者R）。然而進行檢驗模型，并保存主要的數據集。</p>
-<p>然後，即可在RStudio中採用R Markdown進行寫作。輸出有多種方案：</p>
+<h2 id="R_Markdown写作流程">R Markdown写作流程</h2><p>首先，进行初步的描述性统计分析（可使用R Markdown或者R）。然而进行检验模型，并保存主要的数据集。</p>
+<p>然后，即可在RStudio中採用R Markdown进行写作。输出有多种方案：</p>
 <ul>
-<li>直接輸出為HTML： 便於隨時檢視論文輸出結果，包括公式、文檔中R代碼塊生成的結果。</li>
-<li>輸出為MS WORD或者PDF： 便於和其他合作者進行溝通交流。</li>
-<li>輸出為Markdown文件： 採用knitr package中的knit函數，生成對應的Markdown文件。然後定義<strong>精確的</strong>格式文件，通過pandoc生成滿足期刊需要的manuscript。</li>
+<li>直接输出为HTML： 便于随时检视论文输出结果，包括公式、文档中R代码块生成的结果。</li>
+<li>输出为MS WORD或者PDF： 便于和其他合作者进行沟通交流。</li>
+<li>输出为Markdown文件： 採用knitr package中的knit函数，生成对应的Markdown文件。然后定义<strong>精确的</strong>格式文件，通过pandoc生成满足期刊需要的manuscript。</li>
 </ul>
-<p>在寫作過程中，適合輸出為HTML格式。其中，需要在論文首部定義的有：</p>
+<p>在写作过程中，适合输出为HTML格式。其中，需要在论文首部定义的有：</p>
 <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="string">""</span></span><br><span class="line">author: <span class="string">""</span></span><br><span class="line">date: <span class="string">""</span></span><br><span class="line">output: html_document</span><br><span class="line">csl: apa.csl</span><br><span class="line">bibliography: <span class="keyword">ref</span>.bib</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>隨之需要定義的是：</p>
+<p>随之需要定义的是：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="title">library</span><span class="params">(knitr)</span></span></span><br><span class="line">opts_chunk<span class="variable">$set</span>(warning = FALSE, message = FALSE, echo = FALSE, fig<span class="class">.width</span> = <span class="number">6</span>, fig<span class="class">.height</span> = <span class="number">4</span>, fig<span class="class">.align</span> = <span class="string">'center'</span>)</span><br><span class="line"><span class="function"><span class="title">options</span><span class="params">(digits = <span class="number">2</span>, scipen = <span class="number">8</span>)</span></span></span><br><span class="line">knit_theme<span class="variable">$set</span>(<span class="string">"autumn"</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="實用Tips">實用Tips</h2><p>在RStudio中使用R Markdown寫作時，可以採用以下快捷鍵：</p>
+<h2 id="实用Tips">实用Tips</h2><p>在RStudio中使用R Markdown写作时，可以採用以下快捷键：</p>
 <ul>
-<li>Ctrl + Alt + I: 在Rmd文檔中插入R代碼段</li>
+<li>Ctrl + Alt + I: 在Rmd文档中插入R代码段</li>
 <li>Ctrl + Shift + M: 使用pipe operator %&gt;%</li>
 </ul>
 
@@ -132,7 +132,7 @@
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Writing-in-R-Markdown" data-title="R Markdown寫作" data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/"></div>
+    <div class="ds-thread" data-thread-key="post-Writing-in-R-Markdown" data-title="R Markdown写作" data-url="http://wuhsiang.github.io/zh-tw/Elegant-Writing/Writing-in-R-Markdown/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
